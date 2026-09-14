@@ -1,0 +1,1316 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  width: 100%;
+  overflow: hidden;
+
+  background: #f7f7f5;
+  color: #111111;
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.hero-inner {
+  position: relative;
+  z-index: 5;
+
+  min-height: 100svh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(420px, 0.82fr);
+
+  align-items: center;
+
+  gap: clamp(50px, 7vw, 120px);
+
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+
+  z-index: -5;
+
+  pointer-events: none;
+
+  opacity: 0.35;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(17, 17, 17, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(17, 17, 17, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    transparent 100%
+  );
+}
+
+.hero-bg-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: -4;
+
+  filter: blur(70px);
+
+  opacity: 0.35;
+}
+
+.hero-bg-glow--one {
+  width: 500px;
+  height: 500px;
+
+  top: -220px;
+  right: -160px;
+
+  background: rgba(17, 17, 17, 0.035);
+}
+
+.hero-bg-glow--two {
+  width: 380px;
+  height: 380px;
+
+  bottom: -220px;
+  left: -180px;
+
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   COORDINATES
+========================================================= */
+
+.hero-coordinate {
+  position: absolute;
+
+  z-index: 2;
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(17, 17, 17, 0.42);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+.hero-coordinate--top {
+  top: 135px;
+  left: 28px;
+}
+
+.hero-coordinate--bottom {
+  right: 28px;
+  bottom: 42px;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.hero-copy {
+  position: relative;
+
+  z-index: 6;
+
+  max-width: 720px;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 24px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: rgba(17, 17, 17, 0.55);
+}
+
+.eyebrow-line {
+  width: 38px;
+  height: 1px;
+
+  background: #111111;
+
+  opacity: 0.55;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-title {
+  margin: 0;
+
+  font-size:
+    clamp(
+      65px,
+      8.2vw,
+      132px
+    );
+
+  line-height: 0.88;
+
+  letter-spacing: -0.075em;
+
+  font-weight: 500;
+}
+
+.hero-name {
+  display: block;
+
+  font-weight: 500;
+
+  color: #111111;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.hero-role-container {
+  position: relative;
+
+  /*
+    FIX:
+    keeps the role inside one clean line
+    without changing the main title size
+  */
+
+  width: 100%;
+
+  height: clamp(
+    0.78em,
+    0.85em,
+    0.9em
+  );
+
+  overflow: hidden;
+
+  color:
+    rgba(17, 17, 17, 0.43);
+
+  display: flex;
+
+  align-items: flex-start;
+}
+
+.hero-role {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-width: 0;
+
+  /*
+    Smaller than "Amine"
+    so long roles don't get cut.
+  */
+
+  font-size: 0.68em;
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -0.065em;
+
+  white-space: nowrap;
+
+  color:
+    rgba(17, 17, 17, 0.42);
+}
+
+.hero-role-cursor {
+  display: inline-block;
+
+  width: 0.045em;
+
+  height: 0.72em;
+
+  margin-left: 0.08em;
+
+  flex: 0 0 auto;
+
+  background: rgba(17, 17, 17, 0.45);
+
+  transform: translateY(0.02em);
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 470px;
+
+  margin: 38px 0 0;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  letter-spacing: -0.01em;
+
+  color:
+    rgba(17, 17, 17, 0.58);
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 36px;
+}
+
+.hero-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  min-width: 165px;
+
+  height: 54px;
+
+  padding: 0 8px 0 20px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  transition:
+    color 0.45s ease,
+    background 0.45s ease,
+    border-color 0.45s ease,
+    transform 0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+.hero-button::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  transform:
+    translateX(-101%);
+
+  transition:
+    transform 0.55s
+      cubic-bezier(
+        0.16,
+        1,
+        0.3,
+        1
+      );
+}
+
+.hero-button:hover::before {
+  transform:
+    translateX(0);
+}
+
+.hero-button:hover {
+  transform:
+    translateY(-3px);
+}
+
+.hero-button > span {
+  position: relative;
+
+  z-index: 2;
+}
+
+.hero-button--primary {
+  color: #fff;
+
+  background: #111111;
+
+  border: 1px solid #111111;
+}
+
+.hero-button--primary::before {
+  background: #242424;
+}
+
+.hero-button--secondary {
+  color: #111111;
+
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(17, 17, 17, 0.18);
+}
+
+.hero-button--secondary::before {
+  background: #111111;
+}
+
+.hero-button--secondary:hover {
+  color: #fff;
+
+  border-color: #111111;
+}
+
+.hero-button-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
+
+  transition:
+    transform 0.45s ease;
+}
+
+.hero-button--secondary
+.hero-button-icon {
+  border-color:
+    rgba(17, 17, 17, 0.14);
+}
+
+.hero-button:hover
+.hero-button-icon {
+  transform:
+    rotate(45deg);
+}
+
+.hero-button--secondary:hover
+.hero-button-icon {
+  border-color:
+    rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.hero-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 26px;
+
+  margin-top: 55px;
+}
+
+.hero-meta-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.hero-meta-icon {
+  width: 30px;
+  height: 30px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid
+    rgba(17, 17, 17, 0.13);
+
+  border-radius: 50%;
+}
+
+.hero-meta-item > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.hero-meta-item span {
+  font-size: 9px;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(17, 17, 17, 0.42);
+}
+
+.hero-meta-item strong,
+.hero-meta-item a {
+  color: #111111;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  text-decoration: none;
+}
+
+.hero-meta-divider {
+  width: 1px;
+
+  height: 30px;
+
+  background:
+    rgba(17, 17, 17, 0.12);
+}
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.hero-visual {
+  position: relative;
+
+  width: min(
+    100%,
+    620px
+  );
+
+  justify-self: end;
+}
+
+/* =========================================================
+   IMAGE WRAP
+========================================================= */
+
+.hero-image-wrap {
+  position: relative;
+
+  z-index: 4;
+
+  width: 100%;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.hero-image-frame {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 0.79;
+
+  overflow: hidden;
+
+  background: #ddd;
+
+  clip-path:
+    inset(0 0 0 0);
+
+  transition:
+    box-shadow 0.8s
+      cubic-bezier(
+        0.16,
+        1,
+        0.3,
+        1
+      );
+}
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+.hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  pointer-events: none;
+
+  will-change:
+    transform,
+    opacity,
+    filter;
+}
+
+.hero-image--first {
+  z-index: 2;
+}
+
+.hero-image--second {
+  z-index: 1;
+}
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.hero-image-reveal {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 240px;
+  height: 240px;
+
+  z-index: 5;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.04) 40%,
+      transparent 72%
+    );
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LIGHT
+========================================================= */
+
+.hero-image-light {
+  position: absolute;
+
+  top: -20%;
+  bottom: -20%;
+
+  left: 0;
+
+  width: 22%;
+
+  z-index: 6;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.65),
+      transparent
+    );
+
+  filter: blur(14px);
+
+  transform:
+    skewX(-18deg);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.hero-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 7;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02),
+      transparent 35%,
+      rgba(0, 0, 0, 0.22)
+    );
+}
+
+/* =========================================================
+   IMAGE NUMBER
+========================================================= */
+
+.hero-image-number {
+  position: absolute;
+
+  z-index: 12;
+
+  top: 22px;
+  left: 24px;
+
+  font-family: monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.18em;
+
+  color: #fff;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   IMAGE LABEL
+========================================================= */
+
+.hero-image-label {
+  position: absolute;
+
+  z-index: 12;
+
+  right: 24px;
+  bottom: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #fff;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  pointer-events: none;
+}
+
+.hero-image-label span {
+  width: 24px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.75);
+}
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.hero-image-wrap--hover
+.hero-image-frame {
+  box-shadow:
+    0 35px 90px
+    rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   OUTLINE
+========================================================= */
+
+.hero-outline {
+  position: absolute;
+
+  z-index: 1;
+
+  inset:
+    34px
+    -34px
+    -34px
+    34px;
+
+  border:
+    1px solid
+    rgba(17, 17, 17, 0.12);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.hero-floating {
+  position: absolute;
+
+  z-index: 20;
+
+  min-width: 155px;
+
+  padding: 15px 17px;
+
+  background:
+    rgba(10, 10, 10, 0.86);
+
+  border:
+    1px solid
+    rgba(17, 17, 17, 0.11);
+
+  backdrop-filter:
+    blur(16px);
+
+  -webkit-backdrop-filter:
+    blur(16px);
+
+  box-shadow:
+    0 15px 45px
+    rgba(0, 0, 0, 0.07);
+
+  pointer-events: none;
+}
+
+.hero-floating span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(17, 17, 17, 0.42);
+}
+
+.hero-floating strong {
+  display: block;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+
+  color: #111111;
+}
+
+.hero-floating--top {
+  top: 9%;
+
+  right: -58px;
+}
+
+.hero-floating--bottom {
+  bottom: 8%;
+
+  left: -65px;
+}
+
+/* =========================================================
+   CORNERS
+========================================================= */
+
+.hero-corner {
+  position: absolute;
+
+  z-index: 25;
+
+  width: 24px;
+  height: 24px;
+
+  pointer-events: none;
+}
+
+.hero-corner--tl {
+  top: -8px;
+  left: -8px;
+
+  border-top:
+    1px solid #111111;
+
+  border-left:
+    1px solid #111111;
+}
+
+.hero-corner--br {
+  right: -8px;
+  bottom: -8px;
+
+  border-right:
+    1px solid #111111;
+
+  border-bottom:
+    1px solid #111111;
+}
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  color:
+    rgba(17, 17, 17, 0.48);
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease,
+    transform 0.4s ease;
+}
+
+.hero-scroll:hover {
+  color: #111111;
+
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+}
+
+.hero-scroll-line {
+  position: relative;
+
+  width: 50px;
+
+  height: 1px;
+
+  overflow: hidden;
+
+  background:
+    rgba(17, 17, 17, 0.13);
+}
+
+.hero-scroll-line span {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 22px;
+  height: 1px;
+
+  background: #111111;
+
+  animation:
+    scrollLine 2.2s
+    ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    transform:
+      translateX(-25px);
+  }
+
+  50% {
+    transform:
+      translateX(45px);
+  }
+
+  100% {
+    transform:
+      translateX(-25px);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero-inner {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(350px, 0.75fr);
+
+    gap: 45px;
+  }
+
+  .hero-floating--top {
+    right: -30px;
+  }
+
+  .hero-floating--bottom {
+    left: -30px;
+  }
+
+  .hero-outline {
+    inset:
+      25px
+      -25px
+      -25px
+      25px;
+  }
+
+  .hero-role {
+    font-size: 0.64em;
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+
+    padding-top: 130px;
+
+    padding-bottom: 100px;
+  }
+
+  .hero-copy {
+    max-width: 680px;
+  }
+
+  .hero-visual {
+    width:
+      min(
+        100%,
+        570px
+      );
+
+    justify-self: center;
+  }
+
+  .hero-title {
+    font-size:
+      clamp(
+        62px,
+        12vw,
+        105px
+      );
+  }
+
+  .hero-role {
+    font-size: 0.64em;
+  }
+
+  .hero-coordinate--top {
+    top: 105px;
+  }
+
+  .hero-floating--top {
+    right: -18px;
+  }
+
+  .hero-floating--bottom {
+    left: -18px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    min-height: auto;
+
+    padding-top: 120px;
+
+    padding-bottom: 100px;
+
+    gap: 55px;
+  }
+
+  .hero-coordinate {
+    display: none;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 9px;
+  }
+
+  .eyebrow-line {
+    width: 25px;
+  }
+
+  .hero-title {
+    font-size:
+      clamp(
+        52px,
+        16vw,
+        82px
+      );
+
+    line-height: 0.9;
+  }
+
+  /*
+    Role gets smaller on mobile
+    to NEVER overflow.
+  */
+
+  .hero-role {
+    font-size: 0.58em;
+
+    letter-spacing: -0.055em;
+  }
+
+  .hero-role-container {
+    height: 0.75em;
+  }
+
+  .hero-description {
+    margin-top: 28px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    margin-top: 30px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-meta {
+    margin-top: 38px;
+
+    gap: 16px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .hero-meta-divider {
+    width: 100%;
+
+    height: 1px;
+  }
+
+  .hero-visual {
+    width:
+      calc(100% - 22px);
+  }
+
+  .hero-outline {
+    inset:
+      18px
+      -18px
+      -18px
+      18px;
+  }
+
+  .hero-floating {
+    min-width: 125px;
+
+    padding:
+      12px
+      13px;
+  }
+
+  .hero-floating--top {
+    top: 7%;
+
+    right: -15px;
+  }
+
+  .hero-floating--bottom {
+    bottom: 6%;
+
+    left: -15px;
+  }
+
+  .hero-floating strong {
+    font-size: 9px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero-inner {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-role {
+    font-size: 0.56em;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-floating {
+    display: none;
+  }
+
+  .hero-outline {
+    display: none;
+  }
+
+  .hero-image-frame {
+    aspect-ratio: 0.82;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-scroll-line span {
+    animation: none;
+  }
+
+  .hero-role-cursor {
+    animation: none;
+    opacity: 1 !important;
+  }
+
+  .hero-button,
+  .hero-scroll {
+    transition: none !important;
+  }
+}

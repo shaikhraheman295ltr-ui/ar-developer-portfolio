@@ -1,0 +1,436 @@
+/* =========================================================
+   SECTION TITLE — PREMIUM EDITORIAL
+========================================================= */
+
+.section-title {
+  position: relative;
+
+  width: 100%;
+
+  margin-bottom: 4.5rem;
+
+  color: #111111;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.section-eyebrow-wrap {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: fit-content;
+
+  margin-bottom: 18px;
+}
+
+.section-eyebrow-line {
+  position: relative;
+
+  width: 34px;
+  height: 1px;
+
+  overflow: hidden;
+
+  background: rgba(17, 17, 17, 0.2);
+}
+
+.section-eyebrow-line::after {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: #111111;
+
+  transform: translateX(-100%);
+
+  transition:
+    transform 0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.section-title:hover
+.section-eyebrow-line::after {
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   EYEBROW TEXT
+========================================================= */
+
+.section-eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  color: rgba(17, 17, 17, 0.55);
+
+  font-size: 0.68rem;
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.section-eyebrow-number {
+  margin-left: 5px;
+
+  color: rgba(17, 17, 17, 0.25);
+
+  font-size: 0.58rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   TITLE MASK
+========================================================= */
+
+.section-title-mask {
+  overflow: hidden;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.section-title h2 {
+  position: relative;
+
+  margin: 0;
+
+  max-width: 900px;
+
+  font-size:
+    clamp(
+      2.8rem,
+      5.5vw,
+      5.8rem
+    );
+
+  font-weight: 600;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.065em;
+
+  color: #111111;
+
+  text-wrap: balance;
+}
+
+
+/* =========================================================
+   TITLE ACCENT
+========================================================= */
+
+.section-title h2::after {
+  content: '.';
+
+  display: inline-block;
+
+  margin-left: 0.03em;
+
+  color: rgba(17, 17, 17, 0.22);
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.section-title:hover h2::after {
+  color: #111111;
+
+  transform: translateY(-0.08em);
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.section-title-line {
+  width: 100%;
+  height: 1px;
+
+  margin-top: 30px;
+
+  transform-origin: left center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(17, 17, 17, 0.16),
+      rgba(17, 17, 17, 0.05),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.align-center {
+  text-align: center;
+}
+
+.align-center
+.section-eyebrow-wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-center
+.section-title h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-center
+.section-title-line {
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.align-right {
+  text-align: right;
+}
+
+.align-right
+.section-eyebrow-wrap {
+  margin-left: auto;
+}
+
+.align-right
+.section-title h2 {
+  margin-left: auto;
+}
+
+.align-right
+.section-title-line {
+  transform-origin: right center;
+
+  background:
+    linear-gradient(
+      270deg,
+      rgba(17, 17, 17, 0.16),
+      rgba(17, 17, 17, 0.05),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   LEGACY EYEBROW SUPPORT
+========================================================= */
+
+.eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  font-size: 0.7rem;
+
+  color:
+    rgba(17, 17, 17, 0.6);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   HOVER DETAIL
+========================================================= */
+
+.section-title::before {
+  content: '';
+
+  position: absolute;
+
+  top: -18px;
+  right: 0;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  opacity: 0;
+
+  transform: scale(0);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.section-title:hover::before {
+  opacity: 0.35;
+
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .section-title {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-title h2 {
+    font-size:
+      clamp(
+        2.7rem,
+        7vw,
+        4.8rem
+      );
+  }
+
+  .section-title-line {
+    margin-top: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .section-eyebrow-wrap {
+    gap: 9px;
+
+    margin-bottom: 15px;
+  }
+
+  .section-eyebrow-line {
+    width: 25px;
+  }
+
+  .section-eyebrow {
+    font-size: 0.6rem;
+
+    letter-spacing: 0.16em;
+  }
+
+  .section-eyebrow-number {
+    font-size: 0.52rem;
+  }
+
+  .section-title h2 {
+    font-size:
+      clamp(
+        2.45rem,
+        11vw,
+        3.7rem
+      );
+
+    line-height: 0.92;
+
+    letter-spacing: -0.06em;
+  }
+
+  .section-title-line {
+    margin-top: 20px;
+  }
+
+  .section-title::before {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 2.25rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .section-title *,
+  .section-title *::before,
+  .section-title *::after {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

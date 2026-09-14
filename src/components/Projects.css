@@ -1,0 +1,1624 @@
+.projects-book {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 100vh;
+
+  padding: 150px 0 120px;
+
+  background: #f7f7f5;
+
+  color: #111111;
+
+  isolation: isolate;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.projects-book-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    1240px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.book-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(100px);
+
+  opacity: 0.28;
+
+  z-index: -1;
+}
+
+
+.book-glow-one {
+  width: 500px;
+  height: 500px;
+
+  top: 100px;
+  left: -280px;
+
+  background: rgba(
+    0,
+    0,
+    0,
+    0.055
+  );
+}
+
+
+.book-glow-two {
+  width: 420px;
+  height: 420px;
+
+  right: -250px;
+  bottom: 100px;
+
+  background: rgba(
+    0,
+    0,
+    0,
+    0.045
+  );
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.book-header {
+  margin-bottom: 75px;
+}
+
+
+.book-kicker {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 40px;
+
+  color: #777;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.book-kicker span:first-child {
+  color: #111111;
+}
+
+
+.book-kicker i {
+  width: 45px;
+
+  height: 1px;
+
+  background: #bdbdb8;
+}
+
+
+.book-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+
+.book-heading h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      65px,
+      9vw,
+      130px
+    );
+
+  line-height: 0.83;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 500;
+}
+
+
+.book-heading h2 em {
+  color: #8c8c87;
+
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+
+.book-heading p {
+  width: 380px;
+
+  margin: 0 0 8px;
+
+  color: #686862;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   BOOK STAGE
+======================================== */
+
+.book-stage {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 590px;
+
+  perspective: 2400px;
+}
+
+
+/* ========================================
+   BOOK SHADOW
+======================================== */
+
+.book-shadow {
+  position: absolute;
+
+  left: 4%;
+
+  right: 4%;
+
+  bottom: -25px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: rgba(
+    0,
+    0,
+    0,
+    0.14
+  );
+
+  filter: blur(30px);
+
+  z-index: -2;
+}
+
+
+/* ========================================
+   STATIC LEFT PAGE
+======================================== */
+
+.book-static-page {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fdfdfb,
+      #f1f1ed
+    );
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.12
+    );
+
+  border-right: none;
+
+  border-radius:
+    5px
+    0
+    0
+    5px;
+
+  box-shadow:
+    inset -15px 0 35px
+      rgba(0, 0, 0, 0.035),
+
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.95);
+}
+
+
+.page-inner {
+  height: 100%;
+
+  min-height: 590px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* ========================================
+   PAGE TOP
+======================================== */
+
+.page-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.09
+    );
+
+  color: #999;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.page-top span:last-child {
+  color: #111111;
+}
+
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.left-page-content {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 30px 45px;
+}
+
+
+.page-number {
+  margin-bottom: 18px;
+
+  color: #999;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  font-style: italic;
+}
+
+
+.left-page-content h3 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      55px,
+      6vw,
+      85px
+    );
+
+  line-height: 0.88;
+
+  letter-spacing: -0.065em;
+
+  font-weight: 500;
+}
+
+
+.page-subtitle {
+  margin-top: 17px;
+
+  color: #888;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.page-rule {
+  width: 55px;
+
+  height: 1px;
+
+  margin: 30px 0;
+
+  background: #111111;
+}
+
+
+.left-page-content p {
+  max-width: 340px;
+
+  margin: 0;
+
+  color: #6b6b65;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   LEFT FOOTER
+======================================== */
+
+.left-page-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.09
+    );
+
+  color: #999;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* ========================================
+   RIGHT PAGE
+======================================== */
+
+.book-page-wrapper {
+  position: relative;
+
+  min-width: 0;
+
+  perspective: 1800px;
+}
+
+
+.book-turn-page {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  transform-style: preserve-3d;
+
+  backface-visibility: hidden;
+
+  transform-origin: left center;
+
+  box-shadow:
+    0 15px 50px
+      rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   IMAGE PAGE
+======================================== */
+
+.book-image-page {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  background: #e7e7e3;
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.12
+    );
+
+  border-right: none;
+}
+
+
+.image-page-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-bottom: 15px;
+
+  color: #777;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+.image-page-top span:last-child {
+  color: #111111;
+}
+
+
+.book-image-wrap {
+  position: relative;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  background: #f7f7f5;
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.1
+    );
+
+  box-shadow:
+    0 20px 45px
+      rgba(0, 0, 0, 0.12);
+}
+
+
+.book-image-wrap img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.image-paper-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15),
+      transparent 40%,
+      rgba(0, 0, 0, 0.08)
+    );
+}
+
+
+.image-page-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-top: 15px;
+
+  color: #777;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   INFO PAGE
+======================================== */
+
+.book-info-page {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 30px 30px 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff,
+      #f3f3ef
+    );
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.12
+    );
+
+  border-radius:
+    0
+    5px
+    5px
+    0;
+
+  box-shadow:
+    inset 15px 0 35px
+      rgba(0, 0, 0, 0.025);
+}
+
+
+.info-page-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.09
+    );
+}
+
+
+.info-page-top > div:first-child span {
+  color: #999;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.info-page-top h3 {
+  margin: 8px 0 0;
+
+  font-size: 37px;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+
+  font-weight: 500;
+}
+
+
+.info-year {
+  color: #999;
+
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  font-style: italic;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.project-book-description {
+  margin: 22px 0;
+
+  color: #696963;
+
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   ROLE
+======================================== */
+
+.book-info-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 14px 0;
+
+  border-top:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.08
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.08
+    );
+}
+
+
+.book-info-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.1
+    );
+
+  border-radius: 8px;
+
+  background: #f5f5f2;
+}
+
+
+.book-info-row > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.book-info-row span {
+  color: #aaa;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+
+.book-info-row strong {
+  color: #444;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   WORKED ON
+======================================== */
+
+.book-section {
+  margin-top: 20px;
+}
+
+
+.book-section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 13px;
+
+  color: #777;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+
+.book-points {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 9px 12px;
+}
+
+
+.book-point {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 7px;
+
+  color: #666660;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+.book-point span {
+  color: #aaa;
+
+  font-family: Georgia, serif;
+
+  font-size: 8px;
+
+  font-style: italic;
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.book-technologies {
+  margin-top: auto;
+
+  padding-top: 18px;
+}
+
+
+.tech-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #aaa;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+
+.book-technologies > div {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+
+.book-technologies > div span {
+  padding: 6px 8px;
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.1
+    );
+
+  border-radius: 100px;
+
+  color: #777;
+
+  background: #f5f5f2;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.book-technologies > div span:hover {
+  color: #fff;
+
+  background: #111111;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   INFO FOOTER
+======================================== */
+
+.info-page-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.09
+    );
+}
+
+
+.digital-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #999;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+.info-page-footer a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #111111;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: gap 0.3s ease;
+}
+
+
+.info-page-footer a:hover {
+  gap: 10px;
+}
+
+
+/* ========================================
+   BOOK SPINE
+======================================== */
+
+.book-spine {
+  position: absolute;
+
+  z-index: 20;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.12),
+      rgba(255,255,255,0.8),
+      rgba(0,0,0,0.08)
+    );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CONTROLS
+======================================== */
+
+.book-controls {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 38px;
+}
+
+
+.book-controls button {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      17,
+      17,
+      17,
+      0.14
+    );
+
+  border-radius: 50%;
+
+  color: #111111;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.book-controls button:hover {
+  color: #fff;
+
+  background: #111111;
+
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   PROGRESS
+======================================== */
+
+.book-progress {
+  width: 180px;
+}
+
+
+.progress-numbers {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 8px;
+
+  color: #999;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+.progress-numbers span:first-child {
+  color: #111111;
+}
+
+
+.progress-numbers i {
+  width: 20px;
+
+  height: 1px;
+
+  background: #bbb;
+}
+
+
+.progress-track {
+  position: relative;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: #d1d1cc;
+}
+
+
+.progress-fill {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  height: 100%;
+
+  background: #111111;
+}
+
+
+/* ========================================
+   PROJECT NAV
+======================================== */
+
+.book-projects-nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 45px;
+
+  margin-top: 32px;
+}
+
+
+.book-projects-nav button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0;
+
+  border: 0;
+
+  color: #aaa;
+
+  background: none;
+
+  cursor: pointer;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.book-projects-nav button:hover,
+.book-projects-nav button.active {
+  color: #111111;
+}
+
+
+.book-projects-nav button span {
+  font-family: Georgia, serif;
+
+  font-size: 9px;
+
+  font-style: italic;
+}
+
+
+/* ========================================
+   BOTTOM
+======================================== */
+
+.book-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 80px;
+
+  color: #999;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.book-bottom > span:first-child {
+  color: #111111;
+}
+
+
+.book-bottom i {
+  width: 40px;
+
+  height: 1px;
+
+  background: #bbb;
+}
+
+
+.book-bottom div {
+  flex: 1;
+
+  height: 1px;
+
+  margin-left: 10px;
+
+  background: #ddd;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .book-stage {
+    min-height: 550px;
+  }
+
+
+  .page-inner {
+    min-height: 550px;
+
+    padding: 25px;
+  }
+
+
+  .book-turn-page {
+    grid-template-columns:
+      0.8fr
+      1.2fr;
+  }
+
+
+  .left-page-content {
+    padding:
+      25px
+      20px;
+  }
+
+
+  .left-page-content h3 {
+    font-size: 58px;
+  }
+
+
+  .book-info-page {
+    padding: 25px 22px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 760px) {
+
+  .projects-book {
+    padding:
+      90px
+      0
+      80px;
+  }
+
+
+  .projects-book-container {
+    width:
+      min(
+        100% - 30px,
+        1240px
+      );
+  }
+
+
+  .book-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+
+  .book-heading h2 {
+    font-size:
+      clamp(
+        58px,
+        18vw,
+        90px
+      );
+  }
+
+
+  .book-heading p {
+    width: auto;
+
+    max-width: 430px;
+  }
+
+
+  /*
+     On mobile we keep the
+     book feeling but stack
+     the two pages.
+  */
+
+  .book-stage {
+    display: block;
+
+    min-height: auto;
+  }
+
+
+  .book-static-page {
+    min-height: 360px;
+
+    border-right:
+      1px solid
+      rgba(
+        17,
+        17,
+        17,
+        0.12
+      );
+
+    border-radius:
+      5px
+      5px
+      0
+      0;
+  }
+
+
+  .page-inner {
+    min-height: 360px;
+
+    padding: 20px;
+  }
+
+
+  .left-page-content {
+    padding:
+      20px
+      15px;
+  }
+
+
+  .left-page-content h3 {
+    font-size: 52px;
+  }
+
+
+  .left-page-content p {
+    font-size: 13px;
+  }
+
+
+  .book-page-wrapper {
+    min-height: 650px;
+
+    margin-top: 1px;
+  }
+
+
+  .book-turn-page {
+    position: absolute;
+
+    grid-template-columns: 1fr;
+
+    min-height: 650px;
+  }
+
+
+  .book-image-page {
+    min-height: 310px;
+
+    border-right:
+      1px solid
+      rgba(
+        17,
+        17,
+        17,
+        0.12
+      );
+
+    border-bottom: none;
+
+    border-radius:
+      0
+      0
+      0
+      0;
+  }
+
+
+  .book-info-page {
+    min-height: 340px;
+
+    border-radius:
+      0
+      0
+      5px
+      5px;
+  }
+
+
+  .book-spine {
+    display: none;
+  }
+
+
+  .book-controls {
+    margin-top: 28px;
+
+    gap: 16px;
+  }
+
+
+  .book-progress {
+    width: 130px;
+  }
+
+
+  .book-projects-nav {
+    flex-wrap: wrap;
+
+    gap: 18px 25px;
+  }
+
+
+  .book-bottom {
+    margin-top: 55px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 430px) {
+
+  .book-static-page {
+    min-height: 330px;
+  }
+
+
+  .page-inner {
+    min-height: 330px;
+  }
+
+
+  .left-page-content h3 {
+    font-size: 46px;
+  }
+
+
+  .book-page-wrapper {
+    min-height: 620px;
+  }
+
+
+  .book-turn-page {
+    min-height: 620px;
+  }
+
+
+  .book-image-page {
+    min-height: 280px;
+  }
+
+
+  .book-info-page {
+    min-height: 340px;
+
+    padding:
+      22px
+      18px
+      20px;
+  }
+
+
+  .info-page-top h3 {
+    font-size: 30px;
+  }
+
+
+  .project-book-description {
+    font-size: 12px;
+  }
+
+
+  .book-points {
+    grid-template-columns: 1fr;
+  }
+
+
+  .book-controls button {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+
+/* ========================================
+   LIVE LINK
+======================================== */
+
+.book-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 16px;
+  padding: 10px 18px;
+
+  background: #111111;
+  color: #f7f7f5;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  transition: all 0.3s ease;
+}
+
+.book-live-link:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .book-turn-page,
+  .book-controls button,
+  .book-technologies > div span,
+  .info-page-footer a,
+  .book-live-link {
+    transition: none;
+  }
+
+}

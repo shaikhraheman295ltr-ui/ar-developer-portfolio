@@ -1,0 +1,825 @@
+.highlights-map {
+  position: relative;
+  overflow: hidden;
+
+  padding: 150px 0 120px;
+
+  background: #f7f7f5;
+  color: #111111;
+
+  isolation: isolate;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.highlights-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1240px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.map-header {
+  margin-bottom: 75px;
+}
+
+.map-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 40px;
+
+  color: #777;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.map-eyebrow span:first-child {
+  color: #111111;
+}
+
+.map-eyebrow i {
+  width: 45px;
+  height: 1px;
+
+  background: #bdbdb8;
+}
+
+.map-heading {
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  align-items: end;
+
+  gap: 80px;
+}
+
+.map-heading h2 {
+  margin: 0;
+
+  font-size: clamp(65px, 9vw, 130px);
+
+  line-height: 0.84;
+  letter-spacing: -0.07em;
+
+  font-weight: 500;
+}
+
+.map-heading h2 em {
+  color: #8c8c87;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+.map-heading p {
+  max-width: 380px;
+
+  margin: 0 0 8px;
+
+  color: #696963;
+
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   CREATIVE MAP
+======================================== */
+
+.creative-map {
+  position: relative;
+
+  width: 100%;
+  height: 650px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(17, 17, 17, 0.1);
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.96),
+      rgba(242, 242, 238, 0.72)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.map-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.4;
+
+  background-image:
+    linear-gradient(
+      rgba(17, 17, 17, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(17, 17, 17, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+
+  mask-image:
+    radial-gradient(
+      ellipse at center,
+      black 10%,
+      transparent 75%
+    );
+}
+
+
+/* ========================================
+   CONNECTIONS
+======================================== */
+
+.map-connections {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  overflow: visible;
+}
+
+.map-connections path {
+  fill: none;
+
+  stroke: #111111;
+
+  stroke-width: 1;
+
+  stroke-dasharray: 4 8;
+
+  opacity: 0.35;
+}
+
+
+/* ========================================
+   CENTER
+======================================== */
+
+.map-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 190px;
+  height: 190px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid rgba(17, 17, 17, 0.16);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  z-index: 5;
+
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.map-center:hover {
+  border-color: rgba(17, 17, 17, 0.25);
+
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* ========================================
+   ROTATING RINGS
+======================================== */
+
+.center-ring {
+  position: absolute;
+
+  inset: -13px;
+
+  border: 1px solid rgba(17, 17, 17, 0.07);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  animation:
+    rotateRing 18s linear infinite;
+}
+
+.ring-two {
+  inset: -28px;
+
+  border-style: dashed;
+
+  opacity: 0.6;
+
+  animation:
+    rotateRingReverse 25s linear infinite;
+}
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateRingReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* ========================================
+   BRAIN
+======================================== */
+
+.brain-orbit {
+  position: relative;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 7px;
+}
+
+.brain-glow {
+  position: absolute;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: rgba(17, 17, 17, 0.09);
+
+  filter: blur(12px);
+
+  animation:
+    brainPulse 2.8s ease-in-out infinite;
+}
+
+.brain-icon {
+  position: relative;
+  z-index: 3;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #111111;
+
+  border: 1px solid rgba(17, 17, 17, 0.1);
+
+  border-radius: 50%;
+
+  background: rgba(10, 10, 10, 0.96);
+
+  box-shadow:
+    0 8px 25px rgba(17, 17, 17, 0.08);
+
+  animation:
+    brainFloat 3.5s ease-in-out infinite;
+
+  transition:
+    color 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+@keyframes brainFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+}
+
+@keyframes brainPulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.35);
+    opacity: 0.55;
+  }
+}
+
+.map-center:hover .brain-icon {
+  background: #111111;
+  color: #fff;
+
+  transform: scale(1.08);
+}
+
+.map-center:hover .brain-glow {
+  transform: scale(1.5);
+}
+
+
+/* ========================================
+   CENTER TEXT
+======================================== */
+
+.center-small {
+  color: #aaa;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+.map-center h3 {
+  margin: 5px 0;
+
+  font-size: 30px;
+
+  letter-spacing: -0.045em;
+
+  font-weight: 500;
+}
+
+.map-center p {
+  margin: 0;
+
+  color: #999;
+
+  font-family: Georgia, serif;
+
+  font-size: 10px;
+
+  font-style: italic;
+}
+
+
+/* ========================================
+   NODES
+======================================== */
+
+.map-node {
+  position: absolute;
+
+  width: 245px;
+
+  z-index: 4;
+}
+
+.node-card {
+  padding: 20px;
+
+  border: 1px solid rgba(17, 17, 17, 0.1);
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.045);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.map-node:hover .node-card {
+  border-color: rgba(17, 17, 17, 0.22);
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.08);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   NODE POSITIONS
+======================================== */
+
+.node-frontend {
+  left: 4%;
+  top: 8%;
+}
+
+.node-uiux {
+  right: 4%;
+  top: 8%;
+}
+
+.node-web {
+  left: 1%;
+  top: 43%;
+}
+
+.node-responsive {
+  right: 1%;
+  top: 44%;
+}
+
+.node-python {
+  left: 15%;
+  bottom: 5%;
+}
+
+.node-motion {
+  right: 15%;
+  bottom: 5%;
+}
+
+
+/* ========================================
+   NODE TOP
+======================================== */
+
+.node-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.node-number {
+  color: #aaa;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.node-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(17, 17, 17, 0.1);
+
+  border-radius: 9px;
+
+  background: #f5f5f2;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.map-node:hover .node-icon {
+  color: #fff;
+
+  background: #111111;
+
+  transform: rotate(-5deg);
+}
+
+
+/* ========================================
+   NODE CONTENT
+======================================== */
+
+.node-card h3 {
+  margin: 0 0 9px;
+
+  font-size: 21px;
+
+  letter-spacing: -0.035em;
+
+  font-weight: 500;
+}
+
+.node-card p {
+  margin: 0;
+
+  color: #74746e;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   NODE BOTTOM
+======================================== */
+
+.node-bottom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 17px;
+  padding-top: 13px;
+
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+
+  color: #999;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  transition: color 0.3s ease;
+}
+
+.map-node:hover .node-bottom {
+  color: #111111;
+}
+
+.node-bottom svg {
+  transition: transform 0.3s ease;
+}
+
+.map-node:hover .node-bottom svg {
+  transform: translate(3px, -3px);
+}
+
+
+/* ========================================
+   MOVING DOT
+======================================== */
+
+.map-moving-dot {
+  position: absolute;
+
+  left: calc(50% - 4px);
+  top: calc(50% - 4px);
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  box-shadow:
+    0 0 0 5px rgba(17, 17, 17, 0.06),
+    0 0 20px rgba(17, 17, 17, 0.12);
+
+  pointer-events: none;
+
+  opacity: 0.7;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .highlights-map {
+    padding: 110px 0 90px;
+  }
+
+  .map-heading {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .creative-map {
+    height: 700px;
+  }
+
+  .map-node {
+    width: 210px;
+  }
+
+  .node-frontend {
+    left: 2%;
+  }
+
+  .node-uiux {
+    right: 2%;
+  }
+
+  .node-web {
+    left: 1%;
+  }
+
+  .node-responsive {
+    right: 1%;
+  }
+
+  .node-python {
+    left: 8%;
+  }
+
+  .node-motion {
+    right: 8%;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 720px) {
+
+  .highlights-container {
+    width: min(100% - 30px, 1240px);
+  }
+
+  .highlights-map {
+    padding: 90px 0 70px;
+  }
+
+  .map-header {
+    margin-bottom: 55px;
+  }
+
+  .map-heading h2 {
+    font-size: clamp(58px, 18vw, 90px);
+  }
+
+  .creative-map {
+    height: auto;
+
+    min-height: 1050px;
+
+    padding: 30px 20px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+  }
+
+  .map-grid {
+    background-size: 35px 35px;
+  }
+
+  .map-connections {
+    display: none;
+  }
+
+  .map-center {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 150px;
+    height: 150px;
+
+    margin: 20px auto 60px;
+  }
+
+  .map-center h3 {
+    font-size: 26px;
+  }
+
+  .brain-orbit {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brain-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brain-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .map-node {
+    position: relative;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    width: 100%;
+
+    margin-bottom: 15px;
+  }
+
+  .node-card {
+    padding: 18px;
+  }
+
+  .node-card h3 {
+    font-size: 20px;
+  }
+
+  .node-card p {
+    max-width: 500px;
+    font-size: 10px;
+  }
+
+  .map-moving-dot {
+    display: none;
+  }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ring-one,
+  .ring-two,
+  .brain-icon,
+  .brain-glow {
+    animation: none;
+  }
+
+  .map-moving-dot {
+    display: none;
+  }
+}
