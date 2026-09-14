@@ -124,7 +124,7 @@ export default function About() {
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="none"
               />
 
               <div className="about-media-gradient" />

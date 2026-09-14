@@ -125,7 +125,7 @@
 
   letter-spacing: 0.18em;
 
-  color: rgba(17, 17, 17, 0.5);
+  color: rgba(17, 17, 17, 0.6);
 
   pointer-events: none;
 
@@ -262,11 +262,6 @@
 
   min-width: 0;
 
-  /*
-    Smaller than "Amine"
-    so long roles don't get cut.
-  */
-
   font-size: 0.68em;
 
   line-height: 1;
@@ -277,7 +272,7 @@
 
   white-space: nowrap;
 
-  color: rgba(17, 17, 17, 0.5);
+  color: rgba(17, 17, 17, 0.65);
 }
 
 .hero-role-cursor {
@@ -312,7 +307,7 @@
   letter-spacing: -0.01em;
 
   color:
-    rgba(17, 17, 17, 0.58);
+    rgba(17, 17, 17, 0.78);
 }
 
 /* =========================================================

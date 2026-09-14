@@ -83,6 +83,8 @@ export default function Navbar({ items = [] }) {
       `}
     >
 
+      <a href="#home" className="skip-link">Skip to content</a>
+
       <nav
         className="nav container"
         aria-label="Main navigation"

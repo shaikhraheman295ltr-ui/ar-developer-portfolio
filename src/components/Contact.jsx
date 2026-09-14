@@ -64,7 +64,7 @@ export default function Contact() {
             variants={fadeUp}
           >
             <div className="contact-intro">
-              <span className="contact-big-number">01</span>
+              <span className="contact-big-number">07</span>
 
               <div>
                 <span className="contact-label">START A CONVERSATION</span>
@@ -132,10 +132,20 @@ export default function Contact() {
               delay: 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.target;
+              const name = form.name.value.trim();
+              const email = form.email.value.trim();
+              const project = form.project.value;
+              const message = form.message.value.trim();
+              if (!name || !email || !message) return;
+              const body = `Name: ${name}%0AEmail: ${email}%0AProject Type: ${project}%0AMessage: ${message}`;
+              window.location.href = `mailto:${portfolio.email}?subject=Project Inquiry from ${encodeURIComponent(name)}&body=${body}`;
+            }}
           >
             <div className="form-top">
-              <span>02</span>
+              <span>08</span>
               <p>Tell me about your project</p>
             </div>
 
@@ -147,6 +157,7 @@ export default function Contact() {
                   type="text"
                   name="name"
                   placeholder="John Doe"
+                  required
                 />
               </label>
 
@@ -156,6 +167,7 @@ export default function Contact() {
                   type="email"
                   name="email"
                   placeholder="john@example.com"
+                  required
                 />
               </label>
 
@@ -181,6 +193,7 @@ export default function Contact() {
                 name="message"
                 rows="6"
                 placeholder="Tell me what you're building, what you need, and what you're aiming for..."
+                required
               />
             </label>
 

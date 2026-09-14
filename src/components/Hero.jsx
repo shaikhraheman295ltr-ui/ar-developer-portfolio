@@ -17,8 +17,8 @@ import {
 
 import './Hero.css';
 
-import heroImageOne from '../assets/m.jpg';
-import heroImageTwo from '../assets/hero.png';
+import heroImageOne from '../assets/m.webp';
+import heroImageTwo from '../assets/hero.webp';
 
 const roles = [
   'Frontend Developer',

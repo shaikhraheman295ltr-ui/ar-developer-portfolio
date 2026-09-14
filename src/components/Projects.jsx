@@ -10,14 +10,14 @@ import {
   Sparkles,
 } from 'lucide-react';
 
-import stockdzImage from '../assets/builder.jpg';
-import portfolioImage from '../assets/portfolio .jpg';
-import arPaintsImage from '../assets/AR paints.jpg';
-import gameDashboardImage from '../assets/Game Dashboard Design.jpg';
-import watchEcomImage from '../assets/watch e-comrece .jpg';
-import shoeEcomImage from '../assets/e-comerce shoe.jpg';
-import weatherImage from '../assets/Weather Forecast Dashboard.jpg';
-import newsAnalyzerImage from '../assets/news analyzer .jpg';
+import stockdzImage from '../assets/builder.webp';
+import portfolioImage from '../assets/portfolio .webp';
+import arPaintsImage from '../assets/AR paints.webp';
+import gameDashboardImage from '../assets/Game Dashboard Design.webp';
+import watchEcomImage from '../assets/watch e-comrece .webp';
+import shoeEcomImage from '../assets/e-comerce shoe.webp';
+import weatherImage from '../assets/Weather Forecast Dashboard.webp';
+import newsAnalyzerImage from '../assets/news analyzer .webp';
 
 import './Projects.css';
 
