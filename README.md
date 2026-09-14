@@ -1,6 +1,6 @@
 # AR Developer — Portfolio
 
-A modern, interactive developer portfolio built with React, Framer Motion, and Vite. Featuring smooth animations, a custom target cursor, book-style project carousel, and a fully responsive design.
+A modern, interactive developer portfolio built with React, Framer Motion, and Vite. Dark matte black theme with lime accents and wine maroon highlights. Featuring smooth animations, a custom target cursor, book-style project carousel, and a fully responsive design.
 
 ## Live Demo
 
@@ -18,18 +18,21 @@ A modern, interactive developer portfolio built with React, Framer Motion, and V
 
 ## Features
 
+- Dark matte black theme (`#1A1A1A`) with lime (`#C8E64A`) accents
 - Typewriter role animation in the hero section
 - Mouse parallax on hero image
 - Book-style project carousel with page-turn animations
 - Custom target cursor with spin and hover effects
 - Scroll progress indicator
 - Animated intro video splash screen
-- Fully responsive with mobile menu
+- Fully responsive with mobile menu (tested 320px–1440px)
 - 8 project showcases with live demo links
 - Compressed WebP images & optimized video for fast loading
 - Code-split bundles (GSAP & Framer Motion separated)
 - SEO meta tags with Open Graph support
 - Accessibility: skip-to-content link, form validation, reduced-motion support
+- All touch targets ≥ 44px (WCAG 2.5.8)
+- Safe area insets for notch devices
 
 ## Performance
 
@@ -58,7 +61,7 @@ npm run build
 npm run preview
 
 # Lint
-npm run lint
+npx oxlint
 ```
 
 ## Projects Included
@@ -79,26 +82,38 @@ npm run lint
 src/
 ├── main.jsx                  # React root
 ├── App.jsx                   # Root component
-├── index.css                 # Global styles
+├── index.css                 # Global styles & CSS variables
 ├── data/
 │   └── portfolio.js          # Portfolio data
 ├── assets/                   # Images & videos (WebP + compressed MP4)
 └── components/
-    ├── Navbar.jsx            # Navigation
-    ├── Hero.jsx              # Hero section
-    ├── About.jsx             # About section
+    ├── Navbar.jsx            # Navigation with hamburger menu
+    ├── Hero.jsx              # Hero section with typewriter
+    ├── About.jsx             # About section with video
     ├── Skills.jsx            # Skills marquee
-    ├── Services.jsx          # Services cards
-    ├── Projects.jsx          # Project carousel
+    ├── Services.jsx          # Services cards (6 categories)
+    ├── Projects.jsx          # Book-style project carousel (8 projects)
     ├── Highlights.jsx        # Creative map
-    ├── Experience.jsx        # Journey timeline
-    ├── Contact.jsx           # Contact form
-    ├── Footer.jsx            # Footer
-    ├── Intro.jsx             # Splash screen
+    ├── Experience.jsx        # Journey timeline (6 phases)
+    ├── Contact.jsx           # Contact form (mailto:)
+    ├── Footer.jsx            # Footer with links
+    ├── Intro.jsx             # Splash screen with video
     ├── ScrollProgress.jsx    # Scroll indicator
-    ├── TargetCursor.jsx      # Custom cursor
-    └── SectionTitle.jsx      # Reusable title
+    ├── TargetCursor.jsx      # Custom GSAP cursor
+    └── SectionTitle.jsx      # Reusable title component
 ```
+
+## Color Palette
+
+| Role | Color | Hex |
+|------|-------|-----|
+| Background | Matte Black | `#1A1A1A` |
+| Surface | Dark Gray | `#242424` |
+| Primary Text | Off-White | `#F5F5F5` |
+| Accent | Lime | `#C8E64A` |
+| Secondary | Wine Maroon | `#722F37` |
+| Muted Text | Light Gray | `#aaa` |
+| Borders | Subtle White | `rgba(255,255,255,0.06)` |
 
 ## Deployment
 
