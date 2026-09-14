@@ -1,16 +1,16 @@
 :root {
   font-family: Inter, 'Segoe UI', sans-serif;
-  color: #111111;
-  background: #f7f7f5;
+  color: #F5F5F5;
+  background: #1A1A1A;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color-bg: #f7f7f5;
-  --color-text: #111111;
-  --color-muted: rgba(17, 17, 17, 0.72);
+  --color-bg: #1A1A1A;
+  --color-text: #F5F5F5;
+  --color-muted: rgba(245, 245, 245, 0.72);
 }
 
 html {
@@ -76,7 +76,7 @@ img {
 }
 
 ::selection {
-  background: rgba(17, 17, 17, 0.12);
+  background: rgba(200, 230, 74, 0.25);
 }
 
 @media (prefers-reduced-motion: reduce) {

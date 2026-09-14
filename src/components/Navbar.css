@@ -23,16 +23,15 @@
 }
 
 .site-header--scrolled {
-  background: rgba(247, 247, 245, 0.78);
+  background: rgba(26, 26, 26, 0.85);
 
   border-bottom-color:
-    rgba(17, 17, 17, 0.08);
--webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+    rgba(255, 255, 255, 0.06);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.025);
+    0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -62,7 +61,7 @@
 
   gap: 0.7rem;
 
-  color: #111111;
+  color: #F5F5F5;
 
   text-decoration: none;
 
@@ -80,9 +79,9 @@
   display: grid;
   place-items: center;
 
-  background: #111111;
+  background: #C8E64A;
 
-  color: #fff;
+  color: #1A1A1A;
 
   font-size: 0.65rem;
 
@@ -97,7 +96,7 @@
 }
 
 .brand:hover .brand-mark {
-  background: #292929;
+  background: #A8C63A;
 }
 
 .brand-name {
@@ -142,7 +141,7 @@
   align-items: center;
 
   color:
-    rgba(17, 17, 17, 0.48);
+    rgba(255,255,255,0.5);
 
   text-decoration: none;
 
@@ -169,7 +168,7 @@
   letter-spacing: 0.06em;
 
   color:
-    rgba(17, 17, 17, 0.28);
+    rgba(255,255,255,0.25);
 
   opacity: 0;
 
@@ -192,7 +191,7 @@
 
   border-radius: 50%;
 
-  background: #111111;
+  background: #C8E64A;
 
   opacity: 0;
 
@@ -207,7 +206,7 @@
 
 .nav-link:hover,
 .nav-link--active {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 .nav-link:hover .nav-link-number,
@@ -246,7 +245,7 @@
     0
     1rem;
 
-  background: #111111;
+  background: #C8E64A;
 
   color: #fff;
 
@@ -262,7 +261,7 @@
 }
 
 .nav-cta:hover {
-  background: #292929;
+  background: #2A2A2A;
 
   box-shadow:
     0 12px 30px
@@ -311,12 +310,12 @@
   justify-content: center;
 
   border: 1px solid
-    rgba(17, 17, 17, 0.1);
+    rgba(255,255,255,0.08);
 
   background:
     rgba(10, 10, 10, 0.75);
 
-  color: #111111;
+  color: #F5F5F5;
 
   cursor: pointer;
 -webkit-backdrop-filter: blur(12px);
@@ -342,7 +341,7 @@
 
   z-index: 9998;
 
-  background: #f7f7f5;
+  background: #1A1A1A;
 
   overflow: hidden;
 }
@@ -384,10 +383,10 @@
 
   border-bottom:
     1px solid
-    rgba(17, 17, 17, 0.1);
+    rgba(255,255,255,0.08);
 
   color:
-    rgba(17, 17, 17, 0.4);
+    rgba(255,255,255,0.4);
 
   font-size: 0.65rem;
 
@@ -421,13 +420,13 @@
 
   gap: 0.8rem;
 
-  color: #111111;
+  color: #F5F5F5;
 
   text-decoration: none;
 
   border-bottom:
     1px solid
-    rgba(17, 17, 17, 0.1);
+    rgba(255,255,255,0.08);
 
   transition:
     transform 0.35s
@@ -451,7 +450,7 @@
   font-size: 0.65rem;
 
   color:
-    rgba(17, 17, 17, 0.35);
+    rgba(255,255,255,0.35);
 }
 
 .mobile-link-title {
@@ -469,7 +468,7 @@
 
 .mobile-link-arrow {
   color:
-    rgba(17, 17, 17, 0.3);
+    rgba(255,255,255,0.3);
 
   transition:
     transform 0.35s ease,
@@ -477,7 +476,7 @@
 }
 
 .mobile-link:hover .mobile-link-arrow {
-  color: #111111;
+  color: #F5F5F5;
 
   transform: rotate(45deg);
 }
@@ -500,7 +499,7 @@
 
   justify-content: space-between;
 
-  background: #111111;
+  background: #C8E64A;
 
   color: #fff;
 
@@ -515,7 +514,7 @@
 }
 
 .mobile-cta:hover {
-  background: #292929;
+  background: #2A2A2A;
 }
 
 .mobile-cta svg {
@@ -542,7 +541,7 @@
   justify-content: space-between;
 
   color:
-    rgba(17, 17, 17, 0.32);
+    rgba(255,255,255,0.3);
 
   font-size: 0.65rem;
 

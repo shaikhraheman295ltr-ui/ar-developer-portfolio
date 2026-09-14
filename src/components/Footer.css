@@ -8,9 +8,9 @@
   align-items: center;
   justify-content: space-between;
 
-  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  border-top: 1px solid rgba(255,255,255,0.06);
 
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(255,255,255,0.45);
   font-size: 0.75rem;
 }
 
@@ -27,14 +27,14 @@
   width: 44px;
   height: 44px;
 
-  color: rgba(17, 17, 17, 0.45);
+  color: rgba(255,255,255,0.45);
   text-decoration: none;
 
   transition: color 0.2s ease;
 }
 
 .footer-socials a:hover {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 .footer-socials a:nth-child(2),

@@ -2,8 +2,8 @@
   position: relative;
   overflow: hidden;
   padding: 150px 0 120px;
-  background: #f7f7f5;
-  color: #111111;
+  background: #1A1A1A;
+  color: #F5F5F5;
   isolation: isolate;
 }
 
@@ -32,7 +32,7 @@
   height: 360px;
   right: -180px;
   top: 120px;
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0,0,0,0.5);
 }
 
 .orb-two {
@@ -58,7 +58,7 @@
 
   margin-bottom: 42px;
 
-  color: #777;
+  color: #bbb;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -66,7 +66,7 @@
 }
 
 .kicker-number {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 .kicker-line {
@@ -125,7 +125,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #111111;
+  background: #C8E64A;
 
   animation: pulseDot 2s ease-in-out infinite; will-change: transform;
 }
@@ -177,7 +177,7 @@
       rgba(239, 239, 236, 0.94)
     );
 
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 24px;
 
   box-shadow:
@@ -194,7 +194,7 @@
 }
 
 .service-3d-card:hover {
-  border-color: rgba(17, 17, 17, 0.22);
+  border-color: rgba(255,255,255,0.15);
 
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.9) inset,
@@ -253,7 +253,7 @@
 }
 
 .card-number {
-  color: #aaa;
+  color: #bbb;
   font-size: 12px;
   letter-spacing: 0.1em;
 }
@@ -261,11 +261,11 @@
 .card-tag {
   padding: 7px 11px;
 
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 100px;
 
-  color: #777;
-  background: rgba(255, 255, 255, 0.5);
+  color: #bbb;
+  background: rgba(200,230,74,0.1);
 
   font-size: 10px;
   font-weight: 700;
@@ -289,7 +289,7 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(17, 17, 17, 0.12);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 18px;
 
   background: rgba(255, 255, 255, 0.7);
@@ -306,7 +306,7 @@
 }
 
 .service-3d-card:hover .service-icon {
-  background: #111111;
+  background: #2A2A2A;
   color: #fff;
 
   box-shadow:
@@ -396,7 +396,7 @@
   border: 1px solid #cfcfca;
   border-radius: 50%;
 
-  color: #111111;
+  color: #F5F5F5;
 
   font-size: 11px;
 }
@@ -416,9 +416,9 @@
   justify-content: space-between;
   align-items: center;
 
-  border-top: 1px solid rgba(17, 17, 17, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.08);
 
-  color: #777;
+  color: #bbb;
 
   font-size: 10px;
   font-weight: 600;
@@ -436,10 +436,10 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(17, 17, 17, 0.14);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 50%;
 
-  color: #111111;
+  color: #1A1A1A;
 
   transition:
     background 0.35s ease,
@@ -447,7 +447,7 @@
 }
 
 .service-3d-card:hover .card-arrow {
-  background: #111111;
+  background: #2A2A2A;
   color: #fff;
 }
 
@@ -461,7 +461,7 @@
 
   height: 1px;
 
-  background: #111111;
+  background: #C8E64A;
 
   transform: scaleX(0);
   transform-origin: left;
@@ -486,7 +486,7 @@
   align-items: center;
   justify-content: space-between;
 
-  border-top: 1px solid rgba(17, 17, 17, 0.13);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .process-label {
@@ -494,7 +494,7 @@
   align-items: center;
   gap: 12px;
 
-  color: #777;
+  color: #bbb;
 
   font-size: 10px;
   font-weight: 600;
@@ -503,7 +503,7 @@
 }
 
 .process-label span:first-child {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 .process-label i {
@@ -517,7 +517,7 @@
   align-items: center;
   gap: 17px;
 
-  color: #777;
+  color: #bbb;
 
   font-size: 10px;
   font-weight: 700;
@@ -529,11 +529,11 @@
 }
 
 .process-flow span:hover {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 .process-flow b {
-  color: #aaa;
+  color: #bbb;
   font-weight: 400;
 }
 

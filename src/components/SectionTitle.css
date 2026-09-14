@@ -9,7 +9,7 @@
 
   margin-bottom: 4.5rem;
 
-  color: #111111;
+  color: #F5F5F5;
 
   isolation: isolate;
 }
@@ -49,7 +49,7 @@
 
   inset: 0;
 
-  background: #111111;
+  background: #C8E64A;
 
   transform: translateX(-100%);
 
@@ -78,7 +78,7 @@
 
   align-items: center;
 
-  color: rgba(17, 17, 17, 0.55);
+  color: rgba(255,255,255,0.55);
 
   font-size: 0.68rem;
 
@@ -101,7 +101,7 @@
 .section-eyebrow-number {
   margin-left: 5px;
 
-  color: rgba(17, 17, 17, 0.25);
+  color: rgba(255,255,255,0.2);
 
   font-size: 0.58rem;
 
@@ -146,7 +146,7 @@
 
   letter-spacing: -0.065em;
 
-  color: #111111;
+  color: #F5F5F5;
 
   text-wrap: balance;
 }
@@ -163,7 +163,7 @@
 
   margin-left: 0.03em;
 
-  color: rgba(17, 17, 17, 0.22);
+  color: rgba(255,255,255,0.15);
 
   transition:
     color 0.4s ease,
@@ -177,7 +177,7 @@
 }
 
 .section-title:hover h2::after {
-  color: #111111;
+  color: #F5F5F5;
 
   transform: translateY(-0.08em);
 }
@@ -198,8 +198,8 @@
   background:
     linear-gradient(
       90deg,
-      rgba(17, 17, 17, 0.16),
-      rgba(17, 17, 17, 0.05),
+      rgba(255,255,255,0.1),
+      rgba(255,255,255,0.03),
       transparent
     );
 }
@@ -256,8 +256,8 @@
   background:
     linear-gradient(
       270deg,
-      rgba(17, 17, 17, 0.16),
-      rgba(17, 17, 17, 0.05),
+      rgba(255,255,255,0.1),
+      rgba(255,255,255,0.03),
       transparent
     );
 }
@@ -302,7 +302,7 @@
 
   border-radius: 50%;
 
-  background: #111111;
+  background: #C8E64A;
 
   opacity: 0;
 

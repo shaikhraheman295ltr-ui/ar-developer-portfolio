@@ -5,8 +5,8 @@
 .about {
   position: relative;
   padding: 150px 0 120px;
-  background: #f7f7f5;
-  color: #111111;
+  background: #1E1E1E;
+  color: #F5F5F5;
   overflow: hidden;
   isolation: isolate;
 }
@@ -29,7 +29,7 @@
   top: 5%;
   right: -350px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.035);
+  background: radial-gradient(circle, rgba(200,230,74,0.04), transparent 70%);
   filter: blur(100px);
   pointer-events: none;
   z-index: -1;
@@ -54,11 +54,11 @@
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #777;
+  color: #bbb;
 }
 
 .about-section-number span:first-child {
-  color: #111111;
+  color: #C8E64A;
   font-weight: 600;
 }
 
@@ -76,14 +76,14 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #888;
+  color: #bbb;
 }
 
 .about-status > span {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #111111;
+  background: #C8E64A;
   animation: aboutPulse 2s infinite; will-change: transform;
 }
 
@@ -132,7 +132,7 @@
 }
 
 .about-heading strong {
-  color: #111111;
+  color: #F5F5F5;
   font-weight: 500;
 }
 
@@ -207,7 +207,7 @@
       rgba(0, 0, 0, 0.25),
       transparent 18%,
       transparent 70%,
-      rgba(0, 0, 0, 0.025)
+      rgba(0,0,0,0.4)
     );
 }
 
@@ -252,7 +252,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #f7f7f5;
+  background: #1A1A1A;
   animation: aboutPulse 2s infinite; will-change: transform;
 }
 
@@ -294,11 +294,11 @@
 
   padding: 13px 17px;
 
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(30, 30, 30, 0.95);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 100px;
 
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.09);
@@ -310,7 +310,7 @@
 }
 
 .about-floating svg {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 
@@ -336,7 +336,7 @@
   border-radius: 50%;
 
   font-size: 10px;
-  color: #777;
+  color: #bbb;
 }
 
 .about-info h3 {
@@ -349,7 +349,7 @@
 }
 
 .about-info h3 span {
-  color: #888;
+  color: #bbb;
   font-style: italic;
 }
 
@@ -392,7 +392,7 @@
 
   padding: 18px 0;
 
-  border-bottom: 1px solid #dcdcd9;
+  border-bottom: 1px solid #333;
 
   cursor: default;
 
@@ -427,7 +427,7 @@
 }
 
 .about-skill:hover .about-skill-icon {
-  background: #111111;
+  background: #2A2A2A;
   color: white;
   transform: rotate(-8deg);
 }
@@ -445,13 +445,13 @@
 
 .about-skill-text span {
   font-size: 11px;
-  color: #888;
+  color: #bbb;
 }
 
 .about-skill-index {
   margin-left: auto;
   font-size: 10px;
-  color: #aaa;
+  color: #bbb;
   letter-spacing: 0.1em;
 }
 
@@ -467,7 +467,7 @@
 
   margin-top: 38px;
 
-  color: #111111;
+  color: #F5F5F5;
   text-decoration: none;
 
   font-size: 12px;
@@ -498,7 +498,7 @@
 }
 
 .about-cta:hover .about-cta-icon {
-  background: #111111;
+  background: #C8E64A;
   color: white;
   transform: rotate(45deg);
 }
@@ -528,7 +528,7 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
 
-  color: #888;
+  color: #bbb;
 }
 
 .about-tags {
@@ -542,11 +542,11 @@
 .about-tags span {
   padding: 9px 13px;
 
-  border: 1px solid #d8d8d5;
+  border: 1px solid rgba(200,230,74,0.2);
   border-radius: 100px;
 
   font-size: 10px;
-  color: #777;
+  color: #bbb;
 
   transition:
     background 0.3s ease,
@@ -556,8 +556,8 @@
 }
 
 .about-tags span:hover {
-  background: #111111;
-  border-color: #111111;
+  background: rgba(200,230,74,0.1);
+  border-color: #C8E64A;
   color: white;
   transform: translateY(-3px);
 }

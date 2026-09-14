@@ -4,8 +4,8 @@
 
   padding: 150px 0 120px;
 
-  background: #f7f7f5;
-  color: #111111;
+  background: #1A1A1A;
+  color: #F5F5F5;
 
   isolation: isolate;
 }
@@ -40,7 +40,7 @@
 
   margin-bottom: 40px;
 
-  color: #777;
+  color: #bbb;
 
   font-size: 10px;
   font-weight: 700;
@@ -50,7 +50,7 @@
 }
 
 .map-eyebrow span:first-child {
-  color: #111111;
+  color: #C8E64A;
 }
 
 .map-eyebrow i {
@@ -112,7 +112,7 @@
 
   overflow: hidden;
 
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
 
   border-radius: 28px;
 
@@ -141,12 +141,12 @@
 
   background-image:
     linear-gradient(
-      rgba(17, 17, 17, 0.035) 1px,
+      rgba(255,255,255,0.02) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(17, 17, 17, 0.035) 1px,
+      rgba(255,255,255,0.02) 1px,
       transparent 1px
     );
 
@@ -181,7 +181,7 @@
 .map-connections path {
   fill: none;
 
-  stroke: #111111;
+  stroke: #C8E64A;
 
   stroke-width: 1;
 
@@ -213,17 +213,17 @@
 
   text-align: center;
 
-  border: 1px solid rgba(17, 17, 17, 0.16);
+  border: 2px solid rgba(200,230,74,0.3);
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.82);
+  background: #242424;
 -webkit-backdrop-filter: 
 -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.08),
+    0 20px 50px rgba(0,0,0,0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
 
   z-index: 5;
@@ -234,7 +234,7 @@
 }
 
 .map-center:hover {
-  border-color: rgba(17, 17, 17, 0.25);
+  border-color: rgba(255,255,255,0.2);
 
   box-shadow:
     0 25px 65px rgba(0, 0, 0, 0.1),
@@ -251,7 +251,7 @@
 
   inset: -13px;
 
-  border: 1px solid rgba(17, 17, 17, 0.07);
+  border: 1px solid rgba(255,255,255,0.05);
 
   border-radius: 50%;
 
@@ -339,16 +339,16 @@
   align-items: center;
   justify-content: center;
 
-  color: #111111;
+  color: #1A1A1A;
 
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
 
   border-radius: 50%;
 
-  background: rgba(10, 10, 10, 0.96);
+  background: #C8E64A;
 
   box-shadow:
-    0 8px 25px rgba(17, 17, 17, 0.08);
+    0 8px 25px rgba(255,255,255,0.06);
 
   animation:
     brainFloat 3.5s ease-in-out infinite; will-change: transform;
@@ -384,7 +384,7 @@
 }
 
 .map-center:hover .brain-icon {
-  background: #111111;
+  background: #C8E64A;
   color: #fff;
 
   transform: scale(1.08);
@@ -400,7 +400,7 @@
 ======================================== */
 
 .center-small {
-  color: #aaa;
+  color: #bbb;
 
   font-size: 10px;
   font-weight: 700;
@@ -421,7 +421,7 @@
 .map-center p {
   margin: 0;
 
-  color: #999;
+  color: #bbb;
 
   font-family: Georgia, serif;
 
@@ -446,7 +446,7 @@
 .node-card {
   padding: 20px;
 
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
 
   border-radius: 17px;
 
@@ -456,7 +456,7 @@
   backdrop-filter: blur(12px);
 
   box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.045);
+    0 15px 35px rgba(0,0,0,0.4);
 
   transition:
     border-color 0.35s ease,
@@ -466,12 +466,12 @@
 }
 
 .map-node:hover .node-card {
-  border-color: rgba(17, 17, 17, 0.22);
+  border-color: rgba(255,255,255,0.15);
 
-  background: rgba(255, 255, 255, 0.96);
+  background: #2A2A2A;
 
   box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.08);
+    0 25px 50px rgba(0,0,0,0.5);
 
   transform: translateY(-2px);
 }
@@ -525,7 +525,7 @@
 }
 
 .node-number {
-  color: #aaa;
+  color: #bbb;
 
   font-size: 10px;
   font-weight: 700;
@@ -541,11 +541,11 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
 
   border-radius: 9px;
 
-  background: #f5f5f2;
+  background: rgba(200,230,74,0.12);
 
   transition:
     color 0.3s ease,
@@ -556,7 +556,7 @@
 .map-node:hover .node-icon {
   color: #fff;
 
-  background: #111111;
+  background: rgba(200,230,74,0.12);
 
   transform: rotate(-5deg);
 }
@@ -599,9 +599,9 @@
   margin-top: 17px;
   padding-top: 13px;
 
-  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  border-top: 1px solid rgba(255,255,255,0.06);
 
-  color: #999;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -613,7 +613,7 @@
 }
 
 .map-node:hover .node-bottom {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 .node-bottom svg {
@@ -640,11 +640,11 @@
 
   border-radius: 50%;
 
-  background: #111111;
+  background: #C8E64A;
 
   box-shadow:
-    0 0 0 5px rgba(17, 17, 17, 0.06),
-    0 0 20px rgba(17, 17, 17, 0.12);
+    0 0 0 5px rgba(255,255,255,0.04),
+    0 0 20px rgba(255,255,255,0.08);
 
   pointer-events: none;
 

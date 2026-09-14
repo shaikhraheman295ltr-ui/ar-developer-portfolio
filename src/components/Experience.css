@@ -5,9 +5,9 @@
 
   padding: 150px 0 120px;
 
-  background: #f7f7f5;
+  background: #1A1A1A;
 
-  color: #111111;
+  color: #F5F5F5;
 
   isolation: isolate;
 }
@@ -44,13 +44,13 @@
 
   background-image:
     linear-gradient(
-      rgba(17,17,17,0.025) 1px,
+      rgba(255,255,255,0.015) 1px,
       transparent 1px
     ),
 
     linear-gradient(
       90deg,
-      rgba(17,17,17,0.025) 1px,
+      rgba(255,255,255,0.015) 1px,
       transparent 1px
     );
 
@@ -87,7 +87,7 @@
 
   margin-bottom: 42px;
 
-  color: #777;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -100,7 +100,7 @@
 
 
 .journey-eyebrow span:first-child {
-  color: #111111;
+  color: #C8E64A;
 }
 
 
@@ -178,7 +178,7 @@
 
   gap: 8px;
 
-  color: #999;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -194,7 +194,7 @@
 
   border-radius: 50%;
 
-  background: #111111;
+  background: rgba(200,230,74,0.12);
 
   animation:
     journeyPulse
@@ -367,7 +367,7 @@
 
   top: -15px;
 
-  color: #aaa;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -396,7 +396,7 @@
 
   justify-content: center;
 
-  color: #111111;
+  color: #F5F5F5;
 }
 
 
@@ -436,7 +436,7 @@
 
   box-shadow:
     0 18px 45px
-      rgba(0,0,0,0.045),
+      rgba(0,0,0,0.4),
 
     inset 0 1px 0
       rgba(255,255,255,0.95);
@@ -458,7 +458,7 @@
 
   box-shadow:
     0 28px 60px
-      rgba(0,0,0,0.08);
+      rgba(0,0,0,0.5);
 }
 
 
@@ -478,7 +478,7 @@
 
 
 .journey-phase {
-  color: #999;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -524,7 +524,7 @@
 .journey-icon {
   color: #fff;
 
-  background: #111111;
+  background: #2A2A2A;
 
   transform:
     rotate(-5deg);
@@ -599,7 +599,7 @@
 
   margin-bottom: 6px;
 
-  color: #aaa;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -655,9 +655,9 @@
 
   border-radius: 100px;
 
-  color: #777;
+  color: #bbb;
 
-  background: #f6f6f3;
+  background: rgba(200,230,74,0.08);
 
   font-size: 10px;
 
@@ -675,7 +675,7 @@
 .journey-skills span:hover {
   color: #fff;
 
-  background: #111111;
+  background: rgba(200,230,74,0.08);
 
   transform:
     translateY(-2px);
@@ -706,7 +706,7 @@
       0.08
     );
 
-  color: #aaa;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -717,7 +717,7 @@
 
 
 .journey-card-footer svg {
-  color: #111111;
+  color: #F5F5F5;
 
   transition:
     transform 0.3s ease;
@@ -752,7 +752,7 @@
 
   border-radius: 50%;
 
-  background: #111111;
+  background: #C8E64A;
 
   box-shadow:
     0 0 0 5px
@@ -838,7 +838,7 @@
 
   border-radius: 11px;
 
-  background: #f5f5f2;
+  background: #C8E64A;
 }
 
 
@@ -852,7 +852,7 @@
 
   margin-bottom: 5px;
 
-  color: #aaa;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -909,7 +909,7 @@
 
   margin-top: 70px;
 
-  color: #999;
+  color: #bbb;
 
   font-size: 10px;
 
@@ -922,7 +922,7 @@
 
 
 .journey-bottom span:first-child {
-  color: #111111;
+  color: #F5F5F5;
 }
 
 

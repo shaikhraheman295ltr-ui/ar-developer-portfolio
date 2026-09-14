@@ -20,14 +20,14 @@
   background:
     linear-gradient(
       90deg,
-      #111111 0%,
+      #C8E64A 0%,
       #2b2b2b 35%,
       #777777 70%,
       #cfcfcf 100%
     );
 
   box-shadow:
-    0 0 8px rgba(17, 17, 17, 0.18);
+    0 0 8px rgba(255,255,255,0.15);
 
   will-change: transform;
 
@@ -53,7 +53,7 @@
   background:
     linear-gradient(
       90deg,
-      rgba(17, 17, 17, 0.25),
+      rgba(255,255,255,0.2),
       rgba(107, 114, 128, 0.14),
       transparent
     );
