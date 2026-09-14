@@ -26,6 +26,21 @@ A modern, interactive developer portfolio built with React, Framer Motion, and V
 - Animated intro video splash screen
 - Fully responsive with mobile menu
 - 8 project showcases with live demo links
+- Compressed WebP images & optimized video for fast loading
+- Code-split bundles (GSAP & Framer Motion separated)
+- SEO meta tags with Open Graph support
+- Accessibility: skip-to-content link, form validation, reduced-motion support
+
+## Performance
+
+| Asset | Before | After | Reduction |
+|-------|--------|-------|-----------|
+| Intro video (v1) | 3.6 MB | 1.0 MB | 70% |
+| About video (v2) | 3.1 MB | 0.9 MB | 68% |
+| Hero image | 1.3 MB (PNG) | 32 KB (WebP) | 98% |
+| Project images | 1.5 MB | 280 KB | 81% |
+| Main JS bundle | 519 KB | 318 KB | 39% |
+| **Total first load** | **~10.4 MB** | **~2.9 MB** | **72%** |
 
 ## Getting Started
 
@@ -67,7 +82,7 @@ src/
 ├── index.css                 # Global styles
 ├── data/
 │   └── portfolio.js          # Portfolio data
-├── assets/                   # Images & videos
+├── assets/                   # Images & videos (WebP + compressed MP4)
 └── components/
     ├── Navbar.jsx            # Navigation
     ├── Hero.jsx              # Hero section
@@ -81,8 +96,8 @@ src/
     ├── Footer.jsx            # Footer
     ├── Intro.jsx             # Splash screen
     ├── ScrollProgress.jsx    # Scroll indicator
-    ├── SectionTitle.jsx      # Reusable title
-    └── TargetCursor.jsx      # Custom cursor
+    ├── TargetCursor.jsx      # Custom cursor
+    └── SectionTitle.jsx      # Reusable title
 ```
 
 ## Deployment
