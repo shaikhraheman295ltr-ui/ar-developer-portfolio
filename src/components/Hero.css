@@ -9,7 +9,7 @@
   overflow: hidden;
 
   background: #f7f7f5;
-  color: #f0f0f0;
+  color: #111111;
 
   isolation: isolate;
 }
@@ -291,7 +291,7 @@
 
   flex: 0 0 auto;
 
-  background: rgba(240, 240, 240, 0.45);
+  background: rgba(17, 17, 17, 0.45);
 
   transform: translateY(0.02em);
 }
@@ -312,7 +312,7 @@
   letter-spacing: -0.01em;
 
   color:
-    rgba(240, 240, 240, 0.58);
+    rgba(17, 17, 17, 0.58);
 }
 
 /* =========================================================
@@ -410,17 +410,17 @@
 .hero-button--primary {
   color: #fff;
 
-  background: #f0f0f0;
+  background: #111111;
 
-  border: 1px solid #f0f0f0;
+  border: 1px solid #111111;
 }
 
 .hero-button--primary::before {
-  background: #2a2a2a;
+  background: #f0f0f0;
 }
 
 .hero-button--secondary {
-  color: #f0f0f0;
+  color: #111111;
 
   background: transparent;
 
@@ -533,7 +533,7 @@
 
 .hero-meta-item strong,
 .hero-meta-item a {
-  color: #f0f0f0;
+  color: #111111;
 
   font-size: 11px;
 
@@ -969,7 +969,7 @@
 }
 
 .hero-scroll:hover {
-  color: #f0f0f0;
+  color: #000000;
 
   transform:
     translateX(-50%)
@@ -997,7 +997,7 @@
   width: 22px;
   height: 1px;
 
-  background: #f0f0f0;
+  background: #111111;
 
   animation:
     scrollLine 2.2s
