@@ -145,7 +145,7 @@
 
 
 .journey-heading h2 em {
-  color: #8c8c87;
+  color: #777;
 
   font-style: italic;
 
@@ -163,7 +163,7 @@
 .journey-intro p {
   margin: 0 0 25px;
 
-  color: #696963;
+  color: #aaa;
 
   font-size: 13px;
 
@@ -612,7 +612,7 @@
 .journey-focus p {
   margin: 0;
 
-  color: #555550;
+  color: #bbb;
 
   font-family: Georgia, serif;
 
@@ -865,7 +865,7 @@
 .current-text p {
   margin: 0;
 
-  color: #555550;
+  color: #bbb;
 
   font-size: 11px;
 

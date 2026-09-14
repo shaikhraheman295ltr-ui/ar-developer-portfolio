@@ -82,7 +82,7 @@
 }
 
 .map-heading h2 em {
-  color: #8c8c87;
+  color: #777;
 
   font-style: italic;
   font-weight: 400;
@@ -93,7 +93,7 @@
 
   margin: 0 0 8px;
 
-  color: #696963;
+  color: #aaa;
 
   font-size: 13px;
   line-height: 1.85;
