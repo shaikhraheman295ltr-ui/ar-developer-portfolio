@@ -985,11 +985,13 @@
 
 
 .info-page-footer a {
-  display: flex;
+  display: inline-flex;
 
   align-items: center;
 
   gap: 6px;
+
+  padding: 10px 0;
 
   color: #111111;
 
@@ -1190,7 +1192,7 @@
 
   gap: 9px;
 
-  padding: 0;
+  padding: 10px 8px;
 
   border: 0;
 
@@ -1587,7 +1589,7 @@
   gap: 8px;
 
   margin-top: 16px;
-  padding: 10px 18px;
+  padding: 14px 20px;
 
   background: #111111;
   color: #f7f7f5;

@@ -4,6 +4,7 @@
 
 .hero {
   position: relative;
+  min-height: 100vh;
   min-height: 100svh;
   width: 100%;
   overflow: hidden;
@@ -22,13 +23,14 @@
   position: relative;
   z-index: 5;
 
+  min-height: 100vh;
   min-height: 100svh;
 
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
-    minmax(420px, 0.82fr);
+    minmax(0, 0.82fr);
 
   align-items: center;
 
@@ -65,7 +67,7 @@
     );
 
   background-size: 80px 80px;
-
+-webkit-mask-image: 
   mask-image: linear-gradient(
     to bottom,
     black 0%,
@@ -119,7 +121,7 @@
 
   font-family: monospace;
 
-  font-size: 9px;
+  font-size: 10px;
 
   line-height: 1.6;
 
@@ -517,7 +519,7 @@
 }
 
 .hero-meta-item span {
-  font-size: 9px;
+  font-size: 10px;
 
   letter-spacing: 0.13em;
 
@@ -767,7 +769,7 @@
 
   color: #fff;
 
-  font-size: 9px;
+  font-size: 10px;
 
   letter-spacing: 0.18em;
 
@@ -836,11 +838,8 @@
     1px solid
     rgba(17, 17, 17, 0.11);
 
-  backdrop-filter:
-    blur(16px);
-
-  -webkit-backdrop-filter:
-    blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 
   box-shadow:
     0 15px 45px
@@ -856,7 +855,7 @@
 
   font-family: monospace;
 
-  font-size: 8px;
+  font-size: 10px;
 
   letter-spacing: 0.15em;
 
@@ -952,7 +951,7 @@
 
   text-decoration: none;
 
-  font-size: 9px;
+  font-size: 10px;
 
   letter-spacing: 0.15em;
 
@@ -996,7 +995,7 @@
 
   animation:
     scrollLine 2.2s
-    ease-in-out infinite;
+    ease-in-out infinite; will-change: transform;
 }
 
 @keyframes scrollLine {
@@ -1025,7 +1024,7 @@
   .hero-inner {
     grid-template-columns:
       minmax(0, 1fr)
-      minmax(350px, 0.75fr);
+      minmax(0, 0.75fr);
 
     gap: 45px;
   }
@@ -1134,7 +1133,7 @@
   .hero-eyebrow {
     margin-bottom: 20px;
 
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .eyebrow-line {
@@ -1237,7 +1236,7 @@
   }
 
   .hero-floating strong {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .hero-scroll {

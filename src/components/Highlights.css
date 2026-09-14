@@ -151,7 +151,7 @@
     );
 
   background-size: 50px 50px;
-
+-webkit-mask-image: 
   mask-image:
     radial-gradient(
       ellipse at center,
@@ -218,7 +218,8 @@
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.82);
-
+-webkit-backdrop-filter: 
+-webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 
   box-shadow:
@@ -259,7 +260,7 @@
 
 .ring-one {
   animation:
-    rotateRing 18s linear infinite;
+    rotateRing 18s linear infinite; will-change: transform;
 }
 
 .ring-two {
@@ -270,7 +271,7 @@
   opacity: 0.6;
 
   animation:
-    rotateRingReverse 25s linear infinite;
+    rotateRingReverse 25s linear infinite; will-change: transform;
 }
 
 @keyframes rotateRing {
@@ -324,7 +325,7 @@
   filter: blur(12px);
 
   animation:
-    brainPulse 2.8s ease-in-out infinite;
+    brainPulse 2.8s ease-in-out infinite; will-change: transform;
 }
 
 .brain-icon {
@@ -350,7 +351,7 @@
     0 8px 25px rgba(17, 17, 17, 0.08);
 
   animation:
-    brainFloat 3.5s ease-in-out infinite;
+    brainFloat 3.5s ease-in-out infinite; will-change: transform;
 
   transition:
     color 0.35s ease,
@@ -450,7 +451,8 @@
   border-radius: 17px;
 
   background: rgba(255, 255, 255, 0.78);
-
+-webkit-backdrop-filter: 
+-webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 
   box-shadow:

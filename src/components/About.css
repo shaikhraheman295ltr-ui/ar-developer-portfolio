@@ -84,7 +84,7 @@
   height: 6px;
   border-radius: 50%;
   background: #111111;
-  animation: aboutPulse 2s infinite;
+  animation: aboutPulse 2s infinite; will-change: transform;
 }
 
 @keyframes aboutPulse {
@@ -226,7 +226,7 @@
   justify-content: space-between;
 
   color: white;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 
@@ -253,7 +253,7 @@
   height: 5px;
   border-radius: 50%;
   background: #f7f7f5;
-  animation: aboutPulse 2s infinite;
+  animation: aboutPulse 2s infinite; will-change: transform;
 }
 
 
@@ -295,8 +295,8 @@
   padding: 13px 17px;
 
   background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
 
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 100px;
@@ -397,12 +397,12 @@
   cursor: default;
 
   transition:
-    padding-left 0.35s ease,
+    transform 0.35s ease,
     background 0.35s ease;
 }
 
 .about-skill:hover {
-  padding-left: 10px;
+  transform: translateX(10px);
 }
 
 .about-skill-icon {
@@ -450,7 +450,7 @@
 
 .about-skill-index {
   margin-left: auto;
-  font-size: 9px;
+  font-size: 10px;
   color: #aaa;
   letter-spacing: 0.1em;
 }
@@ -524,7 +524,7 @@
 .about-footer-label {
   flex-shrink: 0;
 
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 
@@ -667,7 +667,7 @@
 
   .about-floating {
     padding: 11px 14px;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .about-info h3 {

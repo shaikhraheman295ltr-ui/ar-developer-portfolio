@@ -37,7 +37,7 @@
   height: 7px;
   border-radius: 50%;
   background: #111111;
-  animation: contactPulse 2s ease-in-out infinite;
+  animation: contactPulse 2s ease-in-out infinite; will-change: transform;
 }
 
 @keyframes contactPulse {
@@ -155,12 +155,12 @@
   border-bottom: 1px solid rgba(17, 17, 17, 0.1);
 
   transition:
-    padding-left 0.35s ease,
+    transform 0.35s ease,
     opacity 0.35s ease;
 }
 
 .contact-link:hover {
-  padding-left: 0.6rem;
+  transform: translateX(0.6rem);
 }
 
 .contact-link-icon {
@@ -453,8 +453,7 @@
   cursor: pointer;
 
   transition:
-    transform 0.35s ease,
-    padding 0.35s ease;
+    transform 0.35s ease;
 }
 
 .form-bottom button::before {

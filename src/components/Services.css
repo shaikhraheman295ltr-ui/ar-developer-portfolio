@@ -127,7 +127,7 @@
   border-radius: 50%;
   background: #111111;
 
-  animation: pulseDot 2s ease-in-out infinite;
+  animation: pulseDot 2s ease-in-out infinite; will-change: transform;
 }
 
 @keyframes pulseDot {
