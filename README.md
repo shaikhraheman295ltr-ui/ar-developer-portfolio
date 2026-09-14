@@ -4,7 +4,7 @@ A modern, interactive developer portfolio built with React, Framer Motion, and V
 
 ## Live Demo
 
-**[View Live Portfolio](https://prt-psi.vercel.app/)**
+**[View Live Portfolio](https://prt-theta.vercel.app/)**
 
 ## Tech Stack
 
