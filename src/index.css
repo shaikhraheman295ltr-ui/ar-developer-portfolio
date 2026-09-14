@@ -20,6 +20,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   background: var(--color-bg);
   color: var(--color-text);
 }
@@ -43,6 +44,7 @@ main {
 
 .container {
   width: min(1200px, calc(100vw - 3rem));
+  max-width: 100%;
   margin: 0 auto;
 }
 

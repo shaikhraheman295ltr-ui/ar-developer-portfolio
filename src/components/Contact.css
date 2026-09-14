@@ -444,7 +444,7 @@
   background: #111111;
   color: white;
 
-  padding: 0.9rem 0.9rem 0.9rem 1.35rem;
+  padding: 1rem 1rem 1rem 1.5rem;
 
   font: inherit;
   font-size: 0.78rem;
@@ -590,5 +590,19 @@
 
   .contact-bottom span:last-child {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-wrap {
+    width: calc(100% - 1.5rem);
+  }
+
+  .contact-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
   }
 }

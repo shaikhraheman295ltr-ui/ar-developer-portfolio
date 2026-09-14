@@ -24,6 +24,9 @@
   display: grid;
   place-items: center;
 
+  width: 44px;
+  height: 44px;
+
   color: rgba(17, 17, 17, 0.45);
   text-decoration: none;
 
