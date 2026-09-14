@@ -125,7 +125,7 @@
 
   letter-spacing: 0.18em;
 
-  color: rgba(240, 240, 240, 0.5);
+  color: rgba(17, 17, 17, 0.5);
 
   pointer-events: none;
 
@@ -179,14 +179,14 @@
 
   text-transform: uppercase;
 
-  color: rgba(240, 240, 240, 0.55);
+  color: rgba(17, 17, 17, 0.55);
 }
 
 .eyebrow-line {
   width: 38px;
   height: 1px;
 
-  background: #f0f0f0;
+  background: #111111;
 
   opacity: 0.55;
 }
@@ -217,7 +217,7 @@
 
   font-weight: 500;
 
-  color: #f0f0f0;
+  color: #111111;
 }
 
 .hero-title-line {
@@ -248,7 +248,7 @@
   overflow: hidden;
 
   color:
-    rgba(240, 240, 240, 0.43);
+    rgba(17, 17, 17, 0.43);
 
   display: flex;
 
@@ -277,7 +277,7 @@
 
   white-space: nowrap;
 
-  color: rgba(240, 240, 240, 0.5);
+  color: rgba(17, 17, 17, 0.5);
 }
 
 .hero-role-cursor {
@@ -426,7 +426,7 @@
 
   border:
     1px solid
-    rgba(240, 240, 240, 0.18);
+    rgba(17, 17, 17, 0.18);
 }
 
 .hero-button--secondary::before {
@@ -461,7 +461,7 @@
 
 .hero-button--secondary
 .hero-button-icon {
-  border-color: rgba(240, 240, 240, 0.14);
+  border-color: rgba(17, 17, 17, 0.14);
 }
 
 .hero-button:hover
@@ -508,7 +508,7 @@
 
   border:
     1px solid
-    rgba(240, 240, 240, 0.13);
+    rgba(17, 17, 17, 0.13);
 
   border-radius: 50%;
 }
@@ -528,7 +528,7 @@
 
   text-transform: uppercase;
 
-  color: rgba(240, 240, 240, 0.5);
+  color: rgba(17, 17, 17, 0.5);
 }
 
 .hero-meta-item strong,
@@ -548,7 +548,7 @@
   height: 30px;
 
   background:
-    rgba(240, 240, 240, 0.12);
+    rgba(17, 17, 17, 0.12);
 }
 
 /* =========================================================
@@ -816,7 +816,7 @@
     -34px
     34px;
 
-  border: 1px solid rgba(240, 240, 240, 0.12);
+  border: 1px solid rgba(17, 17, 17, 0.12);
 
   pointer-events: none;
 }
@@ -839,7 +839,7 @@
 
   border:
     1px solid
-    rgba(240, 240, 240, 0.11);
+    rgba(17, 17, 17, 0.11);
 
   backdrop-filter:
     blur(16px);
@@ -915,10 +915,10 @@
   left: -8px;
 
   border-top:
-    1px solid rgba(240, 240, 240, 0.3);
+    1px solid rgba(17, 17, 17, 0.3);
 
   border-left:
-    1px solid rgba(240, 240, 240, 0.3);
+    1px solid rgba(17, 17, 17, 0.3);
 }
 
 .hero-corner--br {
@@ -926,10 +926,10 @@
   bottom: -8px;
 
   border-right:
-    1px solid rgba(240, 240, 240, 0.3);
+    1px solid rgba(17, 17, 17, 0.3);
 
   border-bottom:
-    1px solid rgba(240, 240, 240, 0.3);
+    1px solid rgba(17, 17, 17, 0.3);
 }
 
 /* =========================================================
@@ -953,7 +953,7 @@
 
   gap: 13px;
 
-  color: rgba(240, 240, 240, 0.5);
+  color: rgba(17, 17, 17, 0.5);
 
   text-decoration: none;
 
@@ -985,7 +985,7 @@
 
   overflow: hidden;
 
-  background: rgba(240, 240, 240, 0.13);
+  background: rgba(17, 17, 17, 0.13);
 }
 
 .hero-scroll-line span {
