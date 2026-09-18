@@ -11,7 +11,7 @@ import { portfolio } from '../data/portfolio';
 
 import './Contact.css';
 
-const WEB3_ACCESS_KEY = import.meta.env.VITE_WEB3_ACCESS_KEY;
+const WEB3_ACCESS_KEY = 'ba7f0029-52c0-41a6-9726-941c9c8c8443';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 35 },
