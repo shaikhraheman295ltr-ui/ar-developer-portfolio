@@ -21,9 +21,18 @@ export default function Navbar({ items = [] }) {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
 
+      const sectionMap = {
+        home: 'hero',
+        about: 'about',
+        skills: 'skills',
+        services: 'services',
+        projects: 'projects',
+        contact: 'contact',
+      };
+
       const sections = items
         .map((item) =>
-          document.getElementById(item.toLowerCase())
+          document.getElementById(sectionMap[item.toLowerCase()] || item.toLowerCase())
         )
         .filter(Boolean);
 
@@ -60,8 +69,18 @@ export default function Navbar({ items = [] }) {
       ? 'hidden'
       : '';
 
+    const handleResize = () => {
+      if (window.innerWidth > 900 && isOpen) {
+        setIsOpen(false);
+        document.body.style.overflow = '';
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
     return () => {
       document.body.style.overflow = '';
+      window.removeEventListener('resize', handleResize);
     };
   }, [isOpen]);
 
@@ -83,7 +102,7 @@ export default function Navbar({ items = [] }) {
       `}
     >
 
-      <a href="#home" className="skip-link">Skip to content</a>
+      <a href="#hero" className="skip-link">Skip to content</a>
 
       <nav
         className="nav container"

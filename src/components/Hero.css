@@ -127,7 +127,7 @@
 
   letter-spacing: 0.18em;
 
-  color: rgba(17, 17, 17, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 
   pointer-events: none;
 
@@ -250,7 +250,7 @@
   overflow: hidden;
 
   color:
-    rgba(17, 17, 17, 0.43);
+    rgba(255, 255, 255, 0.43);
 
   display: flex;
 
@@ -963,7 +963,7 @@
 }
 
 .hero-scroll:hover {
-  color: #000000;
+  color: #C8E64A;
 
   transform:
     translateX(-50%)

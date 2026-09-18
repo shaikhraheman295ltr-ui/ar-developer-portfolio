@@ -128,7 +128,7 @@
   margin: 42px 0 0;
   font-size: 18px;
   line-height: 1.7;
-  color: #6d6d6d;
+  color: #888;
 }
 
 .about-heading strong {
@@ -366,7 +366,7 @@
 .about-description p {
   margin: 0 0 18px;
 
-  color: #6b6b6b;
+  color: #888;
 
   font-size: 15px;
   line-height: 1.85;

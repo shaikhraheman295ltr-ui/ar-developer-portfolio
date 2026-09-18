@@ -218,8 +218,7 @@
   border-radius: 50%;
 
   background: #242424;
--webkit-backdrop-filter: 
--webkit-backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 
   box-shadow:

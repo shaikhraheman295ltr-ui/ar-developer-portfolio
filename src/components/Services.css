@@ -32,7 +32,7 @@
   height: 360px;
   right: -180px;
   top: 120px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(200, 230, 74, 0.04);
 }
 
 .orb-two {
@@ -40,7 +40,7 @@
   height: 300px;
   left: -170px;
   bottom: 100px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(114, 47, 55, 0.06);
 }
 
 /* =========================

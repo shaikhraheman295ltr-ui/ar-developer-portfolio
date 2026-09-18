@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
@@ -320,6 +320,15 @@ export default function Projects() {
     setDirection(index > current ? 1 : -1);
     setCurrent(index);
   };
+
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'ArrowRight') nextProject();
+      if (e.key === 'ArrowLeft') previousProject();
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [current]);
 
   return (
     <section className="projects-book" id="projects">

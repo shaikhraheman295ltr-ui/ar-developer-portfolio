@@ -37,13 +37,6 @@
   color: #F5F5F5;
 }
 
-.footer-socials a:nth-child(2),
-.footer-socials a:nth-child(3) {
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-}
-
 @media (max-width: 600px) {
   .footer {
     width: calc(100% - 2rem);

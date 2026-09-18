@@ -7,19 +7,32 @@ export default function Intro() {
   const [isLeaving, setIsLeaving] = useState(false);
 
   useEffect(() => {
-    // Prevent scrolling while intro is visible
     document.body.style.overflow = 'hidden';
 
+    const handleKey = (e) => {
+      if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+        skipIntro();
+      }
+    };
+
+    window.addEventListener('keydown', handleKey);
     return () => {
       document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKey);
     };
   }, []);
 
-  const handleVideoEnd = () => {
-    // Start fade-out animation
+  const skipIntro = () => {
+    if (isLeaving) return;
     setIsLeaving(true);
+    setTimeout(() => {
+      setIsVisible(false);
+      document.body.style.overflow = '';
+    }, 800);
+  };
 
-    // Wait for the fade animation to finish
+  const handleVideoEnd = () => {
+    setIsLeaving(true);
     setTimeout(() => {
       setIsVisible(false);
       document.body.style.overflow = '';
@@ -36,9 +49,16 @@ export default function Intro() {
         autoPlay
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         onEnded={handleVideoEnd}
       />
+      <button
+        className="intro-skip"
+        onClick={skipIntro}
+        aria-label="Skip intro"
+      >
+        Skip
+      </button>
     </div>
   );
 }
