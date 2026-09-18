@@ -173,17 +173,17 @@
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.98),
-      rgba(239, 239, 236, 0.94)
+      rgba(36, 36, 36, 0.98),
+      rgba(30, 30, 30, 0.94)
     );
 
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.06);
   border-radius: 24px;
 
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 25px 70px rgba(0, 0, 0, 0.055),
-    0 8px 20px rgba(0, 0, 0, 0.035);
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 25px 70px rgba(0, 0, 0, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.3);
 
   transform-style: preserve-3d;
 
@@ -194,12 +194,12 @@
 }
 
 .service-3d-card:hover {
-  border-color: rgba(255,255,255,0.15);
+  border-color: rgba(200,230,74,0.15);
 
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 40px 90px rgba(0, 0, 0, 0.11),
-    0 15px 30px rgba(0, 0, 0, 0.05);
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 40px 90px rgba(0, 0, 0, 0.5),
+    0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Featured */
@@ -221,7 +221,7 @@
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(200, 230, 74, 0.06);
 
   filter: blur(30px);
 
@@ -292,11 +292,12 @@
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 18px;
 
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(200, 230, 74, 0.1);
+  color: #C8E64A;
 
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 12px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 
   transform: translateZ(35px);
 
@@ -330,7 +331,7 @@
   display: block;
   margin-bottom: 9px;
 
-  color: #969690;
+  color: #C8E64A;
 
   font-size: 10px;
   font-weight: 600;
@@ -351,7 +352,7 @@
   max-width: 470px;
   margin: 0;
 
-  color: #686862;
+  color: #aaa;
 
   font-size: 13px;
   line-height: 1.75;
@@ -379,7 +380,7 @@
   align-items: center;
   gap: 8px;
 
-  color: #666660;
+  color: #bbb;
 
   font-size: 10px;
   line-height: 1.4;
@@ -393,10 +394,10 @@
   width: 15px;
   height: 15px;
 
-  border: 1px solid #cfcfca;
+  border: 1px solid rgba(200,230,74,0.3);
   border-radius: 50%;
 
-  color: #F5F5F5;
+  color: #C8E64A;
 
   font-size: 11px;
 }
@@ -436,10 +437,10 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(200,230,74,0.2);
   border-radius: 50%;
 
-  color: #1A1A1A;
+  color: #C8E64A;
 
   transition:
     background 0.35s ease,
