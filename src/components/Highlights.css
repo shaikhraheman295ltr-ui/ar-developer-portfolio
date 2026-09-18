@@ -119,13 +119,13 @@
   background:
     radial-gradient(
       circle at center,
-      rgba(255, 255, 255, 0.96),
-      rgba(242, 242, 238, 0.72)
+      rgba(36, 36, 36, 0.98),
+      rgba(26, 26, 26, 0.85)
     );
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.055),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 
@@ -224,7 +224,7 @@
 
   box-shadow:
     0 20px 50px rgba(0,0,0,0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 
   z-index: 5;
 
@@ -234,11 +234,11 @@
 }
 
 .map-center:hover {
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(200,230,74,0.3);
 
   box-shadow:
-    0 25px 65px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 25px 65px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 
@@ -320,7 +320,7 @@
 
   border-radius: 50%;
 
-  background: rgba(17, 17, 17, 0.09);
+  background: rgba(200, 230, 74, 0.08);
 
   filter: blur(12px);
 
@@ -446,13 +446,12 @@
 .node-card {
   padding: 20px;
 
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.06);
 
   border-radius: 17px;
 
-  background: rgba(255, 255, 255, 0.78);
--webkit-backdrop-filter: 
--webkit-backdrop-filter: blur(12px);
+  background: rgba(36, 36, 36, 0.95);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 
   box-shadow:
@@ -466,12 +465,12 @@
 }
 
 .map-node:hover .node-card {
-  border-color: rgba(255,255,255,0.15);
+  border-color: rgba(200,230,74,0.15);
 
-  background: #2A2A2A;
+  background: rgba(42, 42, 42, 0.98);
 
   box-shadow:
-    0 25px 50px rgba(0,0,0,0.5);
+    0 25px 50px rgba(0,0,0,0.6);
 
   transform: translateY(-2px);
 }
@@ -579,7 +578,7 @@
 .node-card p {
   margin: 0;
 
-  color: #74746e;
+  color: #aaa;
 
   font-size: 10px;
 
@@ -643,8 +642,8 @@
   background: #C8E64A;
 
   box-shadow:
-    0 0 0 5px rgba(255,255,255,0.04),
-    0 0 20px rgba(255,255,255,0.08);
+    0 0 0 5px rgba(200,230,74,0.06),
+    0 0 20px rgba(200,230,74,0.1);
 
   pointer-events: none;
 
