@@ -12,7 +12,7 @@ export const portfolio = {
 
   location: 'Algeria',
 
-  email: 'contact@ardeveloper.com',
+  email: 'shaikhraheman295ltr@gmail.com',
 
   phone: '',
 
