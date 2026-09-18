@@ -325,26 +325,16 @@
 
   border:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.14
-    );
+    rgba(200, 230, 74, 0.2);
 
   border-radius: 50%;
 
   background:
-    rgba(
-      255,
-      255,
-      255,
-      0.9
-    );
+    #242424;
 
   box-shadow:
     0 10px 25px
-      rgba(0,0,0,0.06);
+      rgba(0,0,0,0.4);
 
   z-index: 5;
 }
@@ -414,32 +404,21 @@
 
   border:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.1
-    );
+    rgba(255, 255, 255, 0.06);
 
   border-radius: 19px;
 
   background:
-    rgba(
-      255,
-      255,
-      255,
-      0.78
-    );
--webkit-backdrop-filter: 
--webkit-backdrop-filter: blur(14px);
+    rgba(36, 36, 36, 0.95);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 
   box-shadow:
     0 18px 45px
-      rgba(0,0,0,0.4),
+      rgba(0,0,0,0.5),
 
     inset 0 1px 0
-      rgba(255,255,255,0.95);
+      rgba(255,255,255,0.04);
 
   transition:
     border-color 0.35s ease,
@@ -449,16 +428,11 @@
 
 .journey-card:hover {
   border-color:
-    rgba(
-      17,
-      17,
-      17,
-      0.22
-    );
+    rgba(200, 230, 74, 0.15);
 
   box-shadow:
     0 28px 60px
-      rgba(0,0,0,0.5);
+      rgba(0,0,0,0.6);
 }
 
 
@@ -502,16 +476,12 @@
 
   border:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.1
-    );
+    rgba(200, 230, 74, 0.15);
 
   border-radius: 10px;
 
-  background: #f5f5f2;
+  background: rgba(200, 230, 74, 0.1);
+  color: #C8E64A;
 
   transition:
     color 0.3s ease,
@@ -555,7 +525,7 @@
 .journey-description {
   margin: 0;
 
-  color: #6d6d67;
+  color: #aaa;
 
   font-size: 11px;
 
@@ -576,21 +546,11 @@
 
   border-top:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.08
-    );
+    rgba(255, 255, 255, 0.06);
 
   border-bottom:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.08
-    );
+    rgba(255, 255, 255, 0.06);
 }
 
 
@@ -699,12 +659,7 @@
 
   border-top:
     1px solid
-    rgba(
-      17,
-      17,
-      17,
-      0.08
-    );
+    rgba(255, 255, 255, 0.06);
 
   color: #bbb;
 
