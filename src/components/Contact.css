@@ -426,6 +426,10 @@
   color: rgba(255,255,255,0.4);
 }
 
+.form-note:has(+ button[disabled]) {
+  color: rgba(255,255,255,0.4);
+}
+
 /* =========================
    BUTTON
 ========================= */
@@ -482,6 +486,12 @@
 
 .form-bottom button:hover::before {
   transform: translateX(0);
+}
+
+.form-bottom button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .send-icon {

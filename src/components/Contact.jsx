@@ -6,9 +6,12 @@ import {
   Send,
   Sparkles,
 } from 'lucide-react';
+import { useState } from 'react';
 import { portfolio } from '../data/portfolio';
 
 import './Contact.css';
+
+const WEB3_ACCESS_KEY = 'ba7f0029-52c0-41a6-9726-941c9c8c8443';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 35 },
@@ -23,6 +26,44 @@ const fadeUp = {
 };
 
 export default function Contact() {
+  const [status, setStatus] = useState('idle');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const project = form.project.value;
+    const message = form.message.value.trim();
+    if (!name || !email || !message) return;
+
+    setStatus('sending');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3_ACCESS_KEY,
+          name,
+          email,
+          project,
+          message,
+          subject: `Project Inquiry from ${name}`,
+          from_name: 'AR Developer Portfolio',
+        }),
+      });
+
+      if (res.ok) {
+        setStatus('sent');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  };
   return (
     <section className="contact-section" id="contact">
       <div className="contact-wrap">
@@ -132,17 +173,7 @@ export default function Contact() {
               delay: 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            onSubmit={(e) => {
-              e.preventDefault();
-              const form = e.target;
-              const name = form.name.value.trim();
-              const email = form.email.value.trim();
-              const project = form.project.value;
-              const message = form.message.value.trim();
-              if (!name || !email || !message) return;
-              const body = `Name: ${name}%0AEmail: ${email}%0AProject Type: ${project}%0AMessage: ${message}`;
-              window.location.href = `mailto:${portfolio.email}?subject=Project Inquiry from ${encodeURIComponent(name)}&body=${body}`;
-            }}
+            onSubmit={handleSubmit}
           >
             <div className="form-top">
               <span>08</span>
@@ -200,11 +231,14 @@ export default function Contact() {
             <div className="form-bottom">
 
               <span className="form-note">
-                Usually replies within 24–48h.
+                {status === 'sent' && '✓ Message sent successfully!'}
+                {status === 'error' && 'Something went wrong. Try again.'}
+                {status === 'sending' && 'Sending...'}
+                {status === 'idle' && 'Usually replies within 24–48h.'}
               </span>
 
-              <button type="submit" className="cursor-target">
-                <span>Send message</span>
+              <button type="submit" className="cursor-target" disabled={status === 'sending'}>
+                <span>{status === 'sending' ? 'Sending...' : 'Send message'}</span>
 
                 <span className="send-icon">
                   <Send size={17} strokeWidth={1.8} />
