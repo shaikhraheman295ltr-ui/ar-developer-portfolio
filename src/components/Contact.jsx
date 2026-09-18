@@ -116,7 +116,7 @@ export default function Contact() {
             <div className="contact-links">
 
               <a
-                href={`mailto:${portfolio.email}`}
+                href="mailto:shaikhraheman295ltr@gmail.com"
                 className="contact-link cursor-target"
               >
                 <span className="contact-link-icon">
@@ -125,7 +125,7 @@ export default function Contact() {
 
                 <span className="contact-link-content">
                   <small>EMAIL</small>
-                  <strong>{portfolio.email}</strong>
+                  <strong>shaikhraheman295ltr@gmail.com</strong>
                 </span>
 
                 <ArrowUpRight size={19} />
